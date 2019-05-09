@@ -1,6 +1,5 @@
 // Library Imports
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
 import history from "../../../history.js";
 
 // Relative Imports
@@ -14,7 +13,6 @@ import Form from "../../../components/inputs/form";
 import Footer from "../../../components/inputs/footer";
 import Dropdown from "../../../components/inputs/dropdown";
 
-import { Information } from "../../../constants/type.js";
 import { Container, Summary, Row, Value, Label } from "./styles";
 
 const options = [
