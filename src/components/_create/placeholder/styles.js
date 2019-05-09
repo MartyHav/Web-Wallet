@@ -20,4 +20,5 @@ export const Image = styled.div`
   justify-content: center;
   text-align: center;
   color: grey;
+  margin-bottom: 12px;
 `;

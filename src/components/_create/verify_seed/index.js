@@ -5,7 +5,15 @@ import React from "react";
 import { Information } from "../../../constants/type.js";
 import Description from "../../inputs/description/index.js";
 
-const VerifySeed = ({ name, value, onChange, error, label, ...rest }) => {
+const VerifySeed = ({
+  name,
+  loading,
+  value,
+  onChange,
+  error,
+  label,
+  ...rest
+}) => {
   return (
     <>
       <Description
@@ -16,6 +24,7 @@ const VerifySeed = ({ name, value, onChange, error, label, ...rest }) => {
         error={error}
         onChange={onChange}
         rest={rest}
+        loading={loading}
       />
       <Information>
         Please verify your Seed Phrase this will ensure that your Seed Phrase

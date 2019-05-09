@@ -38,31 +38,46 @@ const seed = [
   "choose"
 ];
 
+const seed_response =
+  "whip cactus theme clever relief category crucial decorate ghost veteran owner exile essay turkey spawn transfer potato island add forward script donor marriage choose";
+
 class Create extends Component {
   state = {
     step: 1,
     error: "",
     verify_seed: "",
-    seedPhrase:
-      "whip cactus theme clever relief category crucial decorate ghost veteran owner exile essay turkey spawn transfer potato island add forward script donor marriage choose"
+    seedPhrase: ""
   };
+
+  componentDidMount() {
+    // When component loads go fetch the Seed Phrase. Then setState with the response
+    // Doing it here makes it seem faster to the user as it's preloaded
+    this.setState({
+      seedPhrase: seed_response
+    });
+  }
 
   nextStep = () => {
     const { step, seedPhrase, verify_seed } = this.state;
     const valid = seedPhrase === verify_seed;
+    const stepThree = step === 3;
 
     if (step < 3) {
+      this.setState({ step: step + 1 });
+    } else if (stepThree && !valid) {
+      this.setState({ error: "Seed Phrase is incorrect" });
+      setTimeout(() => {
+        this.setState({ error: "" });
+      }, 2000);
+    } else if (stepThree && valid) {
       this.setState({
-        step: step + 1
+        loading: true
       });
-    } else if (step === 3 && !valid) {
-      this.setState({
-        error: "Sorry, seed is invalid"
-      });
-    } else if (step === 3 && !valid) {
-      history.push("/wallet/assets");
+      setTimeout(() => {
+        history.push("/wallet/assets");
+      }, 2500);
     } else {
-      return null;
+      return this.setState({ step: step + 1 });
     }
   };
 
@@ -93,8 +108,9 @@ class Create extends Component {
             label="Verify Seed Phrase"
             name="verify_seed"
             value={verify_seed}
-            onChange={this.handleChange}
             error={error}
+            onChange={this.handleChange}
+            loading={this.state.loading}
           />
         );
       default:
@@ -102,7 +118,7 @@ class Create extends Component {
   };
 
   render() {
-    const { step } = this.state;
+    const { step, loading } = this.state;
 
     return (
       <Container>
@@ -114,6 +130,7 @@ class Create extends Component {
           route="Sign In!"
           label="Have a Vault already?"
           submit="Generate"
+          loading={loading}
           nextStep={this.nextStep}
           prevStep={this.prevStep}
         >

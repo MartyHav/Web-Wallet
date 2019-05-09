@@ -32,8 +32,10 @@ const Auth = ({
   width,
   nextStep,
   prevStep,
-  children
+  children,
+  loading
 }) => {
+  console.log("loading", loading);
   return (
     <Container>
       <Header>
@@ -53,12 +55,17 @@ const Auth = ({
           ) : (
             <Back onClick={prevStep}>Back</Back>
           )}
-          <Submit onClick={nextStep}>
-            {(step === 1 && "Next") ||
-              (step === 2 && "Verify") ||
-              (step === 3 && "Confirm") ||
-              (step === 4 && "Signing In")}
-          </Submit>
+          {!loading ? (
+            <Submit onClick={nextStep}>
+              {(step === 1 && "Next") ||
+                (step === 2 && "Verify") ||
+                (step === 3 && "Confirm")}
+            </Submit>
+          ) : (
+            <Submit disabled={true} onClick={nextStep}>
+              {step === 3 && "Unlocking..."}
+            </Submit>
+          )}
         </Buttons>
       </Main>
       <Footer>

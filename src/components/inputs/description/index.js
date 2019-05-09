@@ -2,8 +2,8 @@
 import React from "react";
 
 // Relative Imports
-import { Container, Field, Labels } from "./styles";
-import { Label, Error } from "../../../constants/type.js";
+import { Container, Field, Labels, Error } from "./styles";
+import { Label } from "../../../constants/type.js";
 
 const Description = ({ label, error, ...rest }) => {
   return (

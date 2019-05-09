@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import {
   border,
@@ -43,10 +43,9 @@ export const Progress = styled.div`
 
 export const Step = styled.div`
   width: ${props =>
-    (props.width === 1 ? "25%" : null) ||
+    (props.width === 1 ? "10%" : null) ||
     (props.width === 2 ? "50%" : null) ||
-    (props.width === 3 ? "75%" : null) ||
-    (props.width === 4 ? "100%" : null)};
+    (props.width === 3 ? "100%" : null)}
   background: ${button};
   height: auto;
   border-radius: 4px;
@@ -81,11 +80,17 @@ export const Submit = styled.button`
   justify-content: center;
   transition: 500ms;
   border: none;
+  outline: none;
 
   &:hover {
     cursor: pointer;
     transition: 500ms;
     background: #5b6eae;
+  }
+
+  &:disabled {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
   }
 `;
 
