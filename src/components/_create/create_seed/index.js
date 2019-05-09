@@ -5,10 +5,17 @@ import React from "react";
 import { Information } from "../../../constants/type.js";
 import Description from "../../inputs/description/index.js";
 
-const CreateSeed = () => {
+const CreateSeed = ({ value, name, readOnly, ...rest }) => {
   return (
     <>
-      <Description label="Seed Phrase" value="" placeholder="" />
+      <Description
+        label="Seed Phrase"
+        value={value}
+        placeholder=""
+        name={name}
+        readOnly={readOnly}
+        rest={rest}
+      />
       <Information>
         A Seed Phrase is a algorithmically generated password and provides full
         access to your account and assets.{" "}

@@ -131,7 +131,7 @@ class Exchange extends Component {
             />
           </Container>
         </Body>
-        {status ? (
+        {status && (
           <Status>
             <span role="img" aria-label="Money">
               💸
@@ -139,7 +139,7 @@ class Exchange extends Component {
             Congrats, your exchange was submitted. Redirecting you in{" "}
             {this.state.time}'s
           </Status>
-        ) : null}
+        )}
       </Page>
     );
   }

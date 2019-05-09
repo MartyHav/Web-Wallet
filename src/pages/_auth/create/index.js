@@ -1,37 +1,102 @@
 // Library Imports
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import history from "../../../history.js";
 
 // Relative Imports
 import Auth from "../../../components/auth";
 import Description from "../../../components/inputs/description";
-import { Container } from "./styles";
-import { Information } from "../../../constants/type.js";
 import Placeholder from "../../../components/_create/placeholder";
 import CreateSeed from "../../../components/_create/create_seed";
 import VerifySeed from "../../../components/_create/verify_seed";
+import { Container } from "./styles";
+import { Information } from "../../../constants/type.js";
+
+const seed = [
+  "whip",
+  "cactus",
+  "theme",
+  "clever",
+  "relief",
+  "category",
+  "crucial",
+  "decorate",
+  "ghost",
+  "veteran",
+  "owner",
+  "exile",
+  "essay",
+  "turkey",
+  "spawn",
+  "transfer",
+  "potato",
+  "island",
+  "add",
+  "forward",
+  "script",
+  "donor",
+  "marriage",
+  "choose"
+];
 
 class Create extends Component {
   state = {
     step: 1,
-    item: "1"
+    error: "",
+    verify_seed: "",
+    seedPhrase:
+      "whip cactus theme clever relief category crucial decorate ghost veteran owner exile essay turkey spawn transfer potato island add forward script donor marriage choose"
   };
 
-  doThis = () => {
-    setTimeout(() => {
-      alert("Alligator!!!!");
-    }, 1000);
+  nextStep = () => {
+    const { step, seedPhrase, verify_seed } = this.state;
+    const valid = seedPhrase === verify_seed;
+
+    if (step < 3) {
+      this.setState({
+        step: step + 1
+      });
+    } else if (step === 3 && !valid) {
+      this.setState({
+        error: "Sorry, seed is invalid"
+      });
+    } else if (step === 3 && !valid) {
+      history.push("/wallet/assets");
+    } else {
+      return null;
+    }
+  };
+
+  prevStep = () => {
+    const { step } = this.state;
+    this.setState({ step: step - 1 });
+  };
+
+  handleChange = event => {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [name]: value
+    });
   };
 
   handleSwitch = () => {
-    const { step } = this.state;
+    const { step, seedPhrase, verify_seed, error } = this.state;
+
     switch (step) {
       case 1:
         return <Placeholder />;
       case 2:
-        return <CreateSeed />;
+        return <CreateSeed value={seedPhrase} readOnly={true} />;
       case 3:
-        return <VerifySeed />;
+        return (
+          <VerifySeed
+            label="Verify Seed Phrase"
+            name="verify_seed"
+            value={verify_seed}
+            onChange={this.handleChange}
+            error={error}
+          />
+        );
       default:
     }
   };
@@ -49,8 +114,8 @@ class Create extends Component {
           route="Sign In!"
           label="Have a Vault already?"
           submit="Generate"
-          nextStep={() => this.setState({ step: step + 1 })}
-          prevStep={() => this.setState({ step: step - 1 })}
+          nextStep={this.nextStep}
+          prevStep={this.prevStep}
         >
           <div>{this.handleSwitch()}</div>
         </Auth>
@@ -60,25 +125,3 @@ class Create extends Component {
 }
 
 export default Create;
-
-/*
-{(step === 1 && <div>Step 1</div>) ||
-  (step === 2 && (
-    <Description
-      label={"Seed Phrase"}
-      value="whip cactus theme clever relief category crucial decorate ghost veteran owner exile essay turkey spawn transfer potato island add forward script donor marriage choose"
-      placeholder="Enter your 24 word seed phrase"
-    />
-  )) ||
-  (step === 3 && (
-    <Description
-      label={"Seed Phrase"}
-      value=""
-      placeholder="Confirm your 24 word seed phrase"
-    />
-  )) ||
-  (step === 4 && <Redirect to="/wallet/assets" />)}
-
-information="Before generating a new seed phrase please ensure you’re not on a public or unsecured wifi connection and have a pen and pad or password manager ready."
-
-  */
