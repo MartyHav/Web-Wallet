@@ -46,9 +46,7 @@ const Auth = ({
             <Step width={step} />
           </Progress>
           {children}
-          <Information>{information}</Information>
         </Body>
-
         <Buttons>
           {step === 1 ? (
             <Cancel to="/">Cancel</Cancel>
