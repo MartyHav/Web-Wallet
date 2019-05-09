@@ -1,0 +1,32 @@
+import styled from "styled-components";
+import { secondary, border } from "../../../constants/colors.js";
+import { Link } from "react-router-dom";
+
+export const Container = styled.div`
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  grid-column: 1 / 3;
+  border-bottom: 1px solid ${border};
+`;
+
+export const Nav = styled(Link)`
+  height: auto;
+  text-decoration: none;
+`;
+
+export const Row = styled.div`
+  display: flex;
+`;
+
+export const Back = styled.div`
+  font-family: Inter-Regular;
+  font-size: 20px;
+  color: ${secondary};
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-right: 12px;
+`;
