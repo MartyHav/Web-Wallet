@@ -11,7 +11,6 @@ import {
   Footer,
   Cancel,
   Body,
-  Secondary,
   Route,
   Label,
   Progress,

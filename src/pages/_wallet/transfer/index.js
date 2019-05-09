@@ -13,7 +13,6 @@ import Form from "../../../components/inputs/form";
 import Dropdown from "../../../components/inputs/dropdown";
 import Footer from "../../../components/inputs/footer";
 
-import { Information } from "../../../constants/type.js";
 import { Container } from "./styles";
 
 const options = [
@@ -114,7 +113,10 @@ class Exchange extends Component {
         </Body>
         {status && (
           <Status>
-            💸 Congrats, your transfer was submitted. Redirecting you in{" "}
+            <span role="img" aria-label="Money">
+              💸
+            </span>
+            Congrats, your transfer was submitted. Redirecting you in{" "}
             {this.state.time}'s
           </Status>
         )}

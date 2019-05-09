@@ -13,7 +13,7 @@ import Form from "../../../components/inputs/form";
 import Footer from "../../../components/inputs/footer";
 import Dropdown from "../../../components/inputs/dropdown";
 
-import { Container, Summary, Row, Value, Label } from "./styles";
+import { Container } from "./styles";
 
 const options = [
   { asset: "Haven Token", ticker: "XHV" },
@@ -76,13 +76,12 @@ class Exchange extends Component {
       send_amount,
       send_ticker,
       receive_asset,
-      receive_amount,
       receive_ticker
     } = this.state;
-    const usd = 1.0;
+
     const xhv = 0.45;
     const to = send_amount * xhv;
-    const from = receive_amount * xhv;
+
     return (
       <Page>
         <Menu />
@@ -134,7 +133,10 @@ class Exchange extends Component {
         </Body>
         {status ? (
           <Status>
-            💸 Congrats, your exchange was submitted. Redirecting you in{" "}
+            <span role="img" aria-label="Money">
+              💸
+            </span>
+            Congrats, your exchange was submitted. Redirecting you in{" "}
             {this.state.time}'s
           </Status>
         ) : null}
