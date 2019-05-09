@@ -4,9 +4,9 @@ import React, { Component } from "react";
 // Relative Imports
 import { Container, Microcopy, Heading, Page } from "./styles";
 
-import Guides from "../../components/guides/index.js";
+import Guides from "../../../components/guides";
 
-import Footer from "../../components/footer";
+import Footer from "../../../components/footer";
 
 class Guide extends Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
-import media from "../../constants/media.js";
-import { border } from "../../constants/colors.js";
+import media from "../../../constants/media.js";
+import { border } from "../../../constants/colors.js";
 
 const ticker = keyframes`
 0% {

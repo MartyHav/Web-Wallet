@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import media from "../../constants/media.js";
-import { link, link_hover } from "../../constants/colors.js";
-import Binary from "../../assets/binary.svg";
+import media from "../../../constants/media.js";
+import { link, link_hover } from "../../../constants/colors.js";
+
+import img from "../../../assets/binary.svg";
 
 export const Page = styled.div`
   height: 100%;
@@ -18,7 +19,7 @@ export const Container = styled.div`
   background: #2b2e34;
   align-items: center;
   border-bottom: 1px solid #36393f;
-  background-image: url(${Binary});
+  background-image: url(${img});
 `;
 
 export const Microcopy = styled.div`

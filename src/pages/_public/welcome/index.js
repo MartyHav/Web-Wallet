@@ -19,12 +19,12 @@ import {
   Header
 } from "./styles";
 
-import Footer from "../../components/footer";
-import Content from "../../components/content";
-import Link from "../../components/buttons/link";
-import Button from "../../components/buttons/button";
+import Footer from "../../../components/footer";
+import Content from "../../../components/content";
+import Link from "../../../components/buttons/link";
+import Button from "../../../components/buttons/button";
 
-import api from "../../constants/data.js";
+import api from "../../../constants/data.js";
 
 class Welcome extends Component {
   constructor(props) {

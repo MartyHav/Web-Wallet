@@ -13,12 +13,11 @@ import Transfer from "./pages/_wallet/transfer";
 import Settings from "./pages/_wallet/settings";
 import Details from "./pages/_wallet/details";
 
-import Welcome from "./pages/welcome";
 import Create from "./pages/_auth/create";
-
 import Login from "./pages/_auth/login";
-import Guide from "./pages/guide";
-import Demo from "./pages/demo";
+
+import Welcome from "./pages/_public/welcome";
+import Guide from "./pages/_public/guide";
 
 const theme = {
   dark: {

@@ -6,7 +6,6 @@ import { Redirect } from "react-router-dom";
 import { Container } from "./styles";
 import Auth from "../../../components/auth";
 import Description from "../../../components/inputs/description";
-import history from "../../history/index.js";
 
 class Create extends Component {
   state = {

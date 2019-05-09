@@ -4,7 +4,6 @@ import React from "react";
 // Relative Imports
 import {
   Container,
-  Cell,
   State,
   Status,
   Label,
@@ -15,8 +14,6 @@ import {
 } from "./styles";
 
 const Transaction = ({ status, alignment, date, hash, amount }) => {
-  const pending = true;
-
   const tx = "91f71216fff8c29076dc7ff9230387647a77403c2ae7fdfaf9cc8fd715e88f9b";
   const last = tx.substring(tx.length - 4);
   const first = tx.substring(0, 4);

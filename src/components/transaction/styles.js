@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { background } from "../../constants/colors.js";
-import { Link } from "react-router-dom";
 
 export const Container = styled.a`
   height: auto;
@@ -52,7 +51,6 @@ export const State = styled.div`
         return "palevioletred";
       case "completed":
         return "#34d8ac";
-        break;
       default:
     }
   }};
