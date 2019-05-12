@@ -34,6 +34,26 @@ export const Brand = styled(Link)`
   font-family: Inter-ExtraBold;
 `;
 
+export const Theme = styled.div`
+  padding: 12px 26px;
+  background: #7289da;
+  border: none;
+  margin-right: 16px;
+  height: auto;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+
+  transition: 500ms;
+
+  &:hover {
+    cursor: pointer;
+    background: #5b6eae;
+    transition: 500ms;
+  }
+`;
+
 export const Button = styled(Link)`
   padding: 12px 26px;
   background: #7289da;

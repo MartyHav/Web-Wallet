@@ -10,9 +10,10 @@ import Status from "../../../components/_layout/status/";
 import Input from "../../../components/inputs/input";
 import Form from "../../../components/inputs/form";
 
-class Exchange extends Component {
+class Settings extends Component {
   state = {
-    status: false
+    status: false,
+    theme: "theme.dark"
   };
 
   componentDidMount() {
@@ -21,11 +22,13 @@ class Exchange extends Component {
 
   render() {
     const { status } = this.state;
+
     return (
       <Page>
         <Menu />
         <Body span>
           <Header title="Settings" description="Lorem impsum" />
+
           <Form span="true">
             <Input label="Theme" placeholder="Select Asset" width="true" />
             <Input label="Language" placeholder="Enter amount" width="true" />
@@ -52,4 +55,4 @@ class Exchange extends Component {
   }
 }
 
-export default Exchange;
+export default Settings;

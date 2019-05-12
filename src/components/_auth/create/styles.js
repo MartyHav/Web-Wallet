@@ -6,7 +6,7 @@ import {
   background,
   button,
   foreground_hover
-} from "../../constants/colors.js";
+} from "../../../constants/colors.js";
 
 export const Container = styled.div`
   height: auto;

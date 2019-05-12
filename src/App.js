@@ -37,12 +37,26 @@ const theme = {
 
 class App extends Component {
   state = {
-    auth: true,
+    auth: false,
     theme: theme.dark
+  };
+
+  componentDidMount() {
+    console.log("MSP", this.props.auth);
+    this.setState({
+      auth: this.props.auth
+    });
+  }
+
+  switchTheme = theme => {
+    this.setState({
+      theme: theme
+    });
   };
 
   render() {
     const { auth, theme } = this.state;
+
     return (
       <ThemeProvider theme={theme}>
         <Router history={history}>
@@ -66,7 +80,8 @@ class App extends Component {
 }
 
 export const mapStateToProps = state => ({
-  theme: state.theme
+  theme: state.theme,
+  auth: state.auth
 });
 
 export default connect(mapStateToProps)(App);

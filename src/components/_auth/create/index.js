@@ -17,9 +17,9 @@ import {
   Step,
   Back
 } from "./styles";
-import { Title, Description, Information } from "../../constants/type.js";
+import { Title, Description, Information } from "../../../constants/type.js";
 
-const Auth = ({
+const Create = ({
   title,
   description,
   route,
@@ -35,7 +35,6 @@ const Auth = ({
   children,
   loading
 }) => {
-  console.log("loading", loading);
   return (
     <Container>
       <Header>
@@ -76,4 +75,4 @@ const Auth = ({
   );
 };
 
-export default Auth;
+export default Create;

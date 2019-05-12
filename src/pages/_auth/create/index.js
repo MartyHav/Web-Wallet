@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import history from "../../../history.js";
 
 // Relative Imports
-import Auth from "../../../components/auth";
+import Auth from "../../../components/_auth/create/index.js";
 import Description from "../../../components/inputs/description";
 import Placeholder from "../../../components/_create/placeholder";
 import CreateSeed from "../../../components/_create/create_seed";
