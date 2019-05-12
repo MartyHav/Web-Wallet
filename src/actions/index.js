@@ -1,4 +1,4 @@
-import { THEME } from "./types.js";
+import { THEME, AUTH } from "./types.js";
 
 const test = {};
 
@@ -8,6 +8,6 @@ export const currentTheme = theme => ({
 });
 
 export const authUser = auth => ({
-  type: THEME,
-  payload: auth
+  type: AUTH,
+  auth: auth
 });

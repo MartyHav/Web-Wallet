@@ -45,6 +45,7 @@ class Assets extends Component {
 
   render() {
     const { status } = this.state;
+    console.log("CREATE", this.props);
     return (
       <Page>
         <Menu />

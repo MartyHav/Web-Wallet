@@ -22,7 +22,9 @@ import {
 const Auth = ({
   title,
   description,
+  children,
   route,
+  onClick,
   link,
   label,
   information,
@@ -30,10 +32,8 @@ const Auth = ({
   cancel,
   step,
   width,
-  nextStep,
-  prevStep,
-  children,
-  loading
+  loading,
+  disable
 }) => {
   return (
     <Container>
@@ -44,7 +44,10 @@ const Auth = ({
       <Main>
         <Body>{children}</Body>
         <Buttons>
-          <Submit onClick={nextStep}>Login</Submit>
+          <Cancel to="/">Cancel</Cancel>
+          <Submit disabled={disable} onClick={onClick}>
+            {loading ? "Loading..." : "Login"}
+          </Submit>
         </Buttons>
       </Main>
       <Footer>

@@ -42,7 +42,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    console.log("MSP", this.props.auth);
+    console.log("APP.js MSP", this.props.auth);
     this.setState({
       auth: this.props.auth
     });
@@ -61,7 +61,7 @@ class App extends Component {
       <ThemeProvider theme={theme}>
         <Router history={history}>
           <div>
-            <Navigation auth={auth} />
+            <Navigation auth={auth} history={history} />
             <Route path="/" exact component={Welcome} />
             <Route path="/faq" exact component={Faq} />
             <Route path="/wallet/create" exact component={Create} />

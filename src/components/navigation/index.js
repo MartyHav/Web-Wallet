@@ -12,6 +12,7 @@ class Navigation extends Component {
     const auth = false;
     authUser(auth);
   };
+
   render() {
     const { auth, onClick } = this.props;
     return (
@@ -20,16 +21,10 @@ class Navigation extends Component {
           <Logo src={Icon} />
           <Haven>HAVEN</Haven>
         </Brand>
-
-        {auth ? (
-          <Theme onClick={this.logoutUser}>Logout</Theme>
-        ) : (
-          <Button to="/wallet/login">Login</Button>
-        )}
+        <Button to="/wallet/login">Login</Button>
       </Container>
     );
   }
 }
 
 export default Navigation;
-// export default connect(mapStateToProps)(Navigation);

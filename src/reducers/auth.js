@@ -1,9 +1,10 @@
-import { THEME } from "../actions/types.js";
+import { AUTH } from "../actions/types.js";
 
 export default function(state = false, action) {
+  console.log("REDUCER", action.payload);
   switch (action.type) {
-    case THEME:
-      return [...state, action.payload];
+    case AUTH:
+      return [...state, action];
     default:
       return state;
   }
