@@ -30,12 +30,10 @@ class Faq extends Component {
         <Container>
           <Microcopy>
             <Heading>Haven</Heading>
-            <Heading>F.A.Q</Heading>
-            <Heading>Guide</Heading>
+            <Heading>F.A.Q Guide</Heading>
           </Microcopy>
         </Container>
         <Content />
-
         <Footer />
       </Page>
     );
