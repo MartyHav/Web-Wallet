@@ -12,8 +12,8 @@ export const Page = styled.div`
 `;
 
 export const Container = styled.div`
-  height: 600px;
-  width: 100vw;
+  height: 580px;
+  width: auto;
   display: flex;
   flex-direction: column;
   background: #2b2e34;
