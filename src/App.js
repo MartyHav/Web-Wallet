@@ -17,7 +17,7 @@ import Create from "./pages/_auth/create";
 import Login from "./pages/_auth/login";
 
 import Welcome from "./pages/_public/welcome";
-import Guide from "./pages/_public/guide";
+import Faq from "./pages/_public/faq";
 
 const theme = {
   dark: {
@@ -29,6 +29,7 @@ const theme = {
   },
   light: {
     navigation: "#fafafa",
+    body_navigation: "#fff",
     background: "#cccccc",
     foreground: "#ddddd"
   }
@@ -36,18 +37,19 @@ const theme = {
 
 class App extends Component {
   state = {
-    auth: true
+    auth: true,
+    theme: theme.dark
   };
 
   render() {
-    const { auth } = this.state;
+    const { auth, theme } = this.state;
     return (
       <ThemeProvider theme={theme}>
         <Router history={history}>
           <div>
             <Navigation auth={auth} />
             <Route path="/" exact component={Welcome} />
-            <Route path="/guide" exact component={Guide} />
+            <Route path="/faq" exact component={Faq} />
             <Route path="/wallet/create" exact component={Create} />
             <Route path="/wallet/login" exact component={Login} />
             <Route path="/wallet/assets" exact component={Assets} />

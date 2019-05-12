@@ -3,10 +3,11 @@ import React, { Component } from "react";
 
 // Relative Imports
 import { Container, Microcopy, Heading, Page } from "./styles";
-import Guides from "../../../components/guides";
+
+import Content from "../../../components/_public/faq";
 import Footer from "../../../components/footer";
 
-class Guide extends Component {
+class Faq extends Component {
   constructor(props) {
     super(props);
     this.myRef = React.createRef();
@@ -29,11 +30,11 @@ class Guide extends Component {
         <Container>
           <Microcopy>
             <Heading>Haven</Heading>
-            <Heading>Technical Guide</Heading>
+            <Heading>F.A.Q</Heading>
             <Heading>Guide</Heading>
           </Microcopy>
         </Container>
-        <Guides />
+        <Content />
 
         <Footer />
       </Page>
@@ -41,4 +42,4 @@ class Guide extends Component {
   }
 }
 
-export default Guide;
+export default Faq;
