@@ -10,6 +10,13 @@ export const Container = styled.a`
   text-decoration: none;
   border-radius: 4px;
   background: ${background};
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: 500ms;
+  }
 `;
 
 export const Row = styled.div`
@@ -17,9 +24,9 @@ export const Row = styled.div`
   padding: 12px 20px;
   display: flex;
   width: auto;
-
   padding-left: 20px;
   padding-right: 20px;
+  margin-top: ${props => (props.margin ? "-16px" : "0px")};
 `;
 
 export const Cell = styled.div`

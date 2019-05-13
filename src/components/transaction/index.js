@@ -43,7 +43,7 @@ const Transaction = ({ status, alignment, date, hash, amount }) => {
             <Label alignment="right">Value</Label>
           </Data>
         </Row>
-        <Row>
+        <Row margin>
           <Data>
             <Value alignment="left">Transfer</Value>
             <Label alignment="left">Type</Label>

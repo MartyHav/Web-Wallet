@@ -22,11 +22,12 @@ export const Row = styled.div`
   display: flex;
 `;
 
-export const Back = styled.div`
+export const Back = styled(Link)`
   font-family: Inter-Regular;
   font-size: 20px;
   color: ${secondary};
   letter-spacing: 0;
   line-height: 30px;
   margin-right: 12px;
+  text-decoration: none;
 `;

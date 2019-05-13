@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../../constants/media.js";
 
 export const Container = styled.div`
   grid-column: 1 / 3;
@@ -25,4 +26,8 @@ export const Row = styled.div`
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
   height: auto;
+
+  ${media.tablet`
+    grid-template-columns: 1fr;
+  `}
 `;

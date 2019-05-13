@@ -32,7 +32,7 @@ class Details extends Component {
       <Page>
         <Menu />
         <Body span>
-          <Header title={`${id} Overview`} description="Lorem impsum" />
+          <Header back title={`${id} Overview`} description="Lorem impsum" />
           <Chart />
           <Row>
             <Statistic label="Amount" value={amount} />

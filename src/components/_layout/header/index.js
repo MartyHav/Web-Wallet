@@ -9,11 +9,7 @@ const Header = ({ title, description, back }) => {
   return (
     <Container>
       <Row>
-        {back ? (
-          <Nav to="/wallet/assets">
-            <Back>« Back</Back>
-          </Nav>
-        ) : null}
+        {back && <Back to="/wallet/assets">« Back</Back>}
         <Title>{title}</Title>
       </Row>
       <Description>{description}</Description>
