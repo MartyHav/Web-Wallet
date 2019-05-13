@@ -21,6 +21,8 @@ class Details extends Component {
     window.scrollTo(0, 0);
   }
 
+  renderTransactions = () => {};
+
   render() {
     const { id } = this.props.match.params;
     const price = 1.23;
@@ -31,8 +33,12 @@ class Details extends Component {
     return (
       <Page>
         <Menu />
-        <Body span>
-          <Header back title={`${id} Overview`} description="Lorem impsum" />
+        <Body>
+          <Header
+            back
+            title={`${id} Overview`}
+            description="Pricing history and asset values"
+          />
           <Chart />
           <Row>
             <Statistic label="Amount" value={amount} />
@@ -52,7 +58,10 @@ class Details extends Component {
             />
           </Row>
 
-          <Header title="History" description="Lorem impsum" />
+          <Header
+            title="History"
+            description={`Review your ${id} transaction history`}
+          />
           <History>
             <Transaction
               status="pending"
