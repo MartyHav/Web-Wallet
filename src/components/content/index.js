@@ -26,7 +26,7 @@ const Content = ({ ref }) => {
             third party. All Haven transactions are private, anonymous and
             completely untraceable.
           </Description>
-          <LearnMore to="/faq">Read the Technical Guide</LearnMore>
+          <LearnMore to="/faq">Read F.A.Q's</LearnMore>
         </Words>
       </Container>
       <Container reverse>
@@ -47,7 +47,7 @@ const Content = ({ ref }) => {
             equal to 1 USD worth of XHV. Investors can choose to hold the
             volatile coin, XHV, or lock in their portfolio value in xUSD
           </Description>
-          <LearnMore to="/faq">Read the Technical Guide</LearnMore>
+          <LearnMore to="/faq">Read F.A.Q's</LearnMore>
         </Words>
       </Container>
       <Container>
@@ -67,7 +67,7 @@ const Content = ({ ref }) => {
             transactions are anonymous. The price stability of Haven's assets
             gives investors exposure to market volatility, when they choose it.
           </Description>
-          <LearnMore to="/faq">Read the Technical Guide</LearnMore>
+          <LearnMore to="/faq">Read F.A.Q's</LearnMore>
         </Words>
       </Container>
     </>
