@@ -1,7 +1,5 @@
 import { THEME, AUTH } from "./types.js";
 
-const test = {};
-
 export const currentTheme = theme => ({
   type: THEME,
   payload: "dark"

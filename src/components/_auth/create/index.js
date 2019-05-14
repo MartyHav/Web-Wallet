@@ -17,7 +17,7 @@ import {
   Step,
   Back
 } from "./styles";
-import { Title, Description, Information } from "../../../constants/type.js";
+import { Title, Description } from "../../../constants/type.js";
 
 const Create = ({
   title,

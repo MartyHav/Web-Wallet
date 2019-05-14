@@ -4,41 +4,12 @@ import history from "../../../history.js";
 
 // Relative Imports
 import Auth from "../../../components/_auth/create/index.js";
-import Description from "../../../components/inputs/description";
 import Placeholder from "../../../components/_create/placeholder";
 import CreateSeed from "../../../components/_create/create_seed";
 import VerifySeed from "../../../components/_create/verify_seed";
 import { Container } from "./styles";
-import { Information } from "../../../constants/type.js";
 
-const seed = [
-  "whip",
-  "cactus",
-  "theme",
-  "clever",
-  "relief",
-  "category",
-  "crucial",
-  "decorate",
-  "ghost",
-  "veteran",
-  "owner",
-  "exile",
-  "essay",
-  "turkey",
-  "spawn",
-  "transfer",
-  "potato",
-  "island",
-  "add",
-  "forward",
-  "script",
-  "donor",
-  "marriage",
-  "choose"
-];
-
-const seed_response =
+const seed =
   "whip cactus theme clever relief category crucial decorate ghost veteran owner exile essay turkey spawn transfer potato island add forward script donor marriage choose";
 
 class Create extends Component {
@@ -53,7 +24,7 @@ class Create extends Component {
     // When component loads go fetch the Seed Phrase. Then setState with the response
     // Doing it here makes it seem faster to the user as it's preloaded
     this.setState({
-      seedPhrase: seed_response
+      seedPhrase: seed
     });
   }
 

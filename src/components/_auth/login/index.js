@@ -2,7 +2,7 @@
 import React from "react";
 
 // Relative Imports
-import { Title, Description, Information } from "../../../constants/type.js";
+import { Title, Description } from "../../../constants/type.js";
 import {
   Container,
   Main,
@@ -13,10 +13,7 @@ import {
   Cancel,
   Body,
   Route,
-  Label,
-  Progress,
-  Step,
-  Back
+  Label
 } from "./styles";
 
 const Auth = ({

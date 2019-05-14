@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import history from "../../../history.js";
 import { connect } from "react-redux";
-import { authUser } from "../../../actions/index.js";
 
 // Relative Imports
 import { Container } from "./styles";

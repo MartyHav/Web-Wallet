@@ -3,7 +3,6 @@ import React from "react";
 
 // Relative Imports
 import { Container, Cell, Description, Title } from "./styles";
-import { Header } from "../../../constants/type.js";
 
 const Content = ({ ref }) => {
   return (

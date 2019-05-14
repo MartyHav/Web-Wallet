@@ -1,20 +1,5 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { Error as ErrorLabel } from "../../../constants/type.js";
-
-// const errorAnimation = keyframes`
-// 0% {
-//     transform: translate3d(0, 0, 0);
-//     visibility: visible;
-//   }
-//
-//   50% {
-//     transform: translate3d(-10px, 0, 0);
-//   }
-//
-//   100% {
-//     transform: translate3d(0, 0, 0);
-//   }
-// `;
 
 export const Error = styled(ErrorLabel)``;
 
