@@ -44,27 +44,26 @@ class Login extends Component {
     const valid = seed_phrase === seed;
 
     // If invalid set an error state for 2 seconds
-    if (!valid) {
+    if (valid === false) {
       this.setState({ error: "Sorry, wrong seed. " });
       setTimeout(() => {
         this.setState({ error: "" });
       }, 2000);
-    } else if (valid) {
+    } else if (valid === true) {
       // If valid then set the state to loading and auth to true
       console.log("is valid", valid);
       this.setState({
         loading: true,
         auth: true
       });
+
+      // After 2.5s redirect the user. This is to simulate aysnc request
+      setTimeout(() => {
+        this.state.auth && history.push("/wallet/assets");
+        // Also push true into Redux for App.js to use
+        this.props.authUser(true);
+      }, 2500);
     }
-
-    // Also push true into Redux for App.js to use
-    this.props.authUser(true);
-
-    // After 2.5s redirect the user. This is to simulate aysnc request
-    setTimeout(() => {
-      this.state.auth && history.push("/wallet/assets");
-    }, 2500);
   };
 
   render() {

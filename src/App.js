@@ -71,7 +71,7 @@ class App extends Component {
               <Route path="/faq" exact component={Faq} />
               <Route path="/wallet/create" exact component={Create} />
               <Route path="/wallet/login" exact component={Login} />
-              {!auth && history.push("/wallet/login")}
+              {!auth && history.push("/")}
               <Route path="/wallet/assets" exact component={Assets} />
               <Route path="/wallet/assets/:id" exact component={Details} />
               <Route path="/wallet/exchange" exact component={Exchange} />
@@ -91,36 +91,3 @@ export const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(App);
-
-/*
-<Route path="/" exact component={Welcome} />
-<Route path="/faq" exact component={Faq} />
-<Route path="/wallet/create" exact component={Create} />
-<Route path="/wallet/login" exact component={Login} />
-<Route path="/wallet/assets" exact component={Assets} />
-<Route path="/wallet/assets/:id" exact component={Details} />
-<Route path="/wallet/exchange" exact component={Exchange} />
-<Route path="/wallet/transfer" exact component={Transfer} />
-<Route path="/wallet/history" exact component={History} />
-<Route path="/wallet/settings" exact component={Settings} />
-<Redirect to="/wallet/assets" />
-
-{auth ? (
-  <>
-    <Route path="/wallet/assets" exact component={Assets} />
-    <Route path="/wallet/assets/:id" exact component={Details} />
-    <Route path="/wallet/exchange" exact component={Exchange} />
-    <Route path="/wallet/transfer" exact component={Transfer} />
-    <Route path="/wallet/history" exact component={History} />
-    <Route path="/wallet/settings" exact component={Settings} />
-  </>
-) : (
-  <>
-    {history.push("/")}
-    <Route path="/" exact component={Welcome} />
-    <Route path="/faq" exact component={Faq} />
-    <Route path="/wallet/create" exact component={Create} />
-    <Route path="/wallet/login" exact component={Login} />
-  </>
-)}
-*/
