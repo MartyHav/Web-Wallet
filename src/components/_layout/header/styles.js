@@ -30,4 +30,11 @@ export const Back = styled(Link)`
   line-height: 30px;
   margin-right: 12px;
   text-decoration: none;
+  transition: 750ms;
+
+  &:hover {
+    color: #fff;
+    transition: 750ms;
+    cursor: pointer;
+  }
 `;
