@@ -1,10 +1,11 @@
 import { AUTH } from "../actions/types.js";
 
-export default function(state = false, action) {
-  console.log("REDUCER", action.payload);
+const INITIAL_STATE = false;
+
+export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
     case AUTH:
-      return [...state, action];
+      return action.payload;
     default:
       return state;
   }

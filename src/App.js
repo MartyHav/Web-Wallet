@@ -1,9 +1,14 @@
 // Library Imports
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import { Router, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { connect } from "react-redux";
 import history from "./history.js";
+import { authUser } from "./actions/index.js";
+
+import Private from "./routes/private/index.js";
+import Public from "./routes/public/index.js";
 
 // Relative Imports
 import Navigation from "./components/navigation";
@@ -42,7 +47,6 @@ class App extends Component {
   };
 
   componentDidMount() {
-    console.log("APP.js MSP", this.props.auth);
     this.setState({
       auth: this.props.auth
     });
@@ -55,24 +59,27 @@ class App extends Component {
   };
 
   render() {
-    const { auth, theme } = this.state;
-
+    const { theme } = this.state;
+    const { auth } = this.props;
     return (
       <ThemeProvider theme={theme}>
         <Router history={history}>
-          <div>
+          <>
             <Navigation auth={auth} history={history} />
-            <Route path="/" exact component={Welcome} />
-            <Route path="/faq" exact component={Faq} />
-            <Route path="/wallet/create" exact component={Create} />
-            <Route path="/wallet/login" exact component={Login} />
-            <Route path="/wallet/assets" exact component={Assets} />
-            <Route path="/wallet/assets/:id" exact component={Details} />
-            <Route path="/wallet/exchange" exact component={Exchange} />
-            <Route path="/wallet/transfer" exact component={Transfer} />
-            <Route path="/wallet/history" exact component={History} />
-            <Route path="/wallet/settings" exact component={Settings} />
-          </div>
+            <div>
+              <Route path="/" exact component={Welcome} />
+              <Route path="/faq" exact component={Faq} />
+              <Route path="/wallet/create" exact component={Create} />
+              <Route path="/wallet/login" exact component={Login} />
+              {!auth && history.push("/wallet/login")}
+              <Route path="/wallet/assets" exact component={Assets} />
+              <Route path="/wallet/assets/:id" exact component={Details} />
+              <Route path="/wallet/exchange" exact component={Exchange} />
+              <Route path="/wallet/transfer" exact component={Transfer} />
+              <Route path="/wallet/history" exact component={History} />
+              <Route path="/wallet/settings" exact component={Settings} />
+            </div>
+          </>
         </Router>
       </ThemeProvider>
     );
@@ -80,8 +87,40 @@ class App extends Component {
 }
 
 export const mapStateToProps = state => ({
-  theme: state.theme,
   auth: state.auth
 });
 
 export default connect(mapStateToProps)(App);
+
+/*
+<Route path="/" exact component={Welcome} />
+<Route path="/faq" exact component={Faq} />
+<Route path="/wallet/create" exact component={Create} />
+<Route path="/wallet/login" exact component={Login} />
+<Route path="/wallet/assets" exact component={Assets} />
+<Route path="/wallet/assets/:id" exact component={Details} />
+<Route path="/wallet/exchange" exact component={Exchange} />
+<Route path="/wallet/transfer" exact component={Transfer} />
+<Route path="/wallet/history" exact component={History} />
+<Route path="/wallet/settings" exact component={Settings} />
+<Redirect to="/wallet/assets" />
+
+{auth ? (
+  <>
+    <Route path="/wallet/assets" exact component={Assets} />
+    <Route path="/wallet/assets/:id" exact component={Details} />
+    <Route path="/wallet/exchange" exact component={Exchange} />
+    <Route path="/wallet/transfer" exact component={Transfer} />
+    <Route path="/wallet/history" exact component={History} />
+    <Route path="/wallet/settings" exact component={Settings} />
+  </>
+) : (
+  <>
+    {history.push("/")}
+    <Route path="/" exact component={Welcome} />
+    <Route path="/faq" exact component={Faq} />
+    <Route path="/wallet/create" exact component={Create} />
+    <Route path="/wallet/login" exact component={Login} />
+  </>
+)}
+*/

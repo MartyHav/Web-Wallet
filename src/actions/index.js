@@ -7,5 +7,5 @@ export const currentTheme = theme => ({
 
 export const authUser = auth => ({
   type: AUTH,
-  auth: auth
+  payload: auth
 });
