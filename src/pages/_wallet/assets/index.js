@@ -8,7 +8,7 @@ import Menu from "../../../components/_layout/menu";
 import Header from "../../../components/_layout/header";
 import Status from "../../../components/_layout/status/";
 import Card from "../../../components/card";
-
+import Overview from "../../../components/overview";
 import data from "../../../constants/data.js";
 
 class Assets extends Component {
@@ -45,15 +45,18 @@ class Assets extends Component {
 
   render() {
     const { status } = this.state;
-    console.log("CREATE", this.props);
     return (
       <Page>
         <Menu />
         <Body>
-          <Header title="Assets" description="Lorem impsum" />
+          <Header
+            title="Assets"
+            description="Overview of all available Haven Assets"
+          />
+          <Overview amount="1,234.56" />
           {this.renderTokens()}
         </Body>
-        {status ? <Status>Pending transaction</Status> : null}
+        {status && <Status>Pending transaction</Status>}
       </Page>
     );
   }
