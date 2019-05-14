@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import history from "../../../history.js";
 import { connect } from "react-redux";
-import { authUser } from "../../../actions/index.js";
+import { authUser } from "../../../actions";
 
 // Relative Imports
 import { Container } from "./styles";
@@ -39,7 +39,7 @@ class Login extends Component {
 
   handleLogin = () => {
     // Deconstruct state
-    const { seed_phrase, auth } = this.state;
+    const { seed_phrase } = this.state;
     // Simply the validation
     const valid = seed_phrase === seed;
 
@@ -51,7 +51,7 @@ class Login extends Component {
       }, 2000);
     } else if (valid === true) {
       // If valid then set the state to loading and auth to true
-      console.log("is valid", valid);
+
       this.setState({
         loading: true,
         auth: true

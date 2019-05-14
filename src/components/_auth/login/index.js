@@ -43,7 +43,7 @@ const Auth = ({
         <Buttons>
           <Cancel to="/">Cancel</Cancel>
           <Submit disabled={disable} onClick={onClick}>
-            {loading ? "Loading..." : "Login"}
+            {loading ? "Unlocking..." : "Login"}
           </Submit>
         </Buttons>
       </Main>
