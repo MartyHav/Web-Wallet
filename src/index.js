@@ -10,7 +10,10 @@ import App from "./App.js";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import reduxThunk from "redux-thunk";
+
 import reducers from "./reducers";
+import interRegular from "./assets/fonts/Inter-Regular.ttf";
+import interBold from "./assets/fonts/Inter-Bold.ttf";
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 
@@ -19,10 +22,19 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter-Regular', 'Inter-Bold', serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    @font-face {
+     font-family: 'Inter-Regular';
+     src: url(${interRegular});
+  }
+    @font-face {
+     font-family: 'Inter-Bold';
+     src: url(${interBold});
+  }
 
   }`;
 

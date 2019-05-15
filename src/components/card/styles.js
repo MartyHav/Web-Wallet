@@ -28,6 +28,7 @@ export const Container = styled(Link)`
 
 export const Title = styled.div`
   font-family: Inter-Bold;
+
   font-size: 17px;
   color: white;
   letter-spacing: 0;

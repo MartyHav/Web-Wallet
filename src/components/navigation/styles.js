@@ -20,7 +20,7 @@ export const Logo = styled.img`
 export const Haven = styled.div`
   color: white;
   font-size: 20px;
-  font-weight: 600;
+  font-family: "Inter-Bold";
   margin-left: 12px;
 `;
 
@@ -31,7 +31,6 @@ export const Brand = styled(Link)`
   align-items: center;
   margin-left: 16px;
   text-decoration: none;
-  font-family: Inter-ExtraBold;
 `;
 
 export const Theme = styled.div`
