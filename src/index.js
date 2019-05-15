@@ -13,6 +13,7 @@ import reduxThunk from "redux-thunk";
 
 import reducers from "./reducers";
 import interRegular from "./assets/fonts/Inter-Regular.ttf";
+import semiBold from "./assets/fonts/Inter-SemiBold.ttf";
 import interBold from "./assets/fonts/Inter-Bold.ttf";
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
@@ -31,6 +32,12 @@ const GlobalStyle = createGlobalStyle`
      font-family: 'Inter-Regular';
      src: url(${interRegular});
   }
+
+    @font-face {
+     font-family: 'Inter-SemiBold';
+     src: url(${semiBold});
+  }
+
     @font-face {
      font-family: 'Inter-Bold';
      src: url(${interBold});

@@ -34,7 +34,7 @@ export const Balance = styled.div`
   justify-content: center;
   border-bottom: 1px solid #3e4147;
   font-size: 32px;
-  font-family: Inter-ExtraBold;
+  font-family: Inter-Bold;
   color: #ffffff;
   letter-spacing: 0;
   line-height: 30px;
