@@ -80,7 +80,7 @@ class Create extends Component {
   };
 
   handleSwitch = () => {
-    const { step, seed, verify_seed, error } = this.state;
+    const { step, seed, verify_seed, error, loading } = this.state;
 
     switch (step) {
       case 1:
@@ -95,7 +95,7 @@ class Create extends Component {
             value={verify_seed}
             error={error}
             onChange={this.handleChange}
-            loading={this.state.loading}
+            loading={loading}
           />
         );
       default:
@@ -109,11 +109,11 @@ class Create extends Component {
         <Auth
           title="Create a Vault"
           description="To create a new vault please generate a new seed phrase."
-          step={step}
           link="/wallet/login"
           route="Sign In!"
           label="Have a Vault already?"
           submit="Generate"
+          step={step}
           loading={loading}
           nextStep={this.nextStep}
           prevStep={this.prevStep}
