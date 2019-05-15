@@ -10,12 +10,14 @@ import Icon from "../../assets/haven.svg";
 
 class Navigation extends Component {
   handleLogout = () => {
-    this.props.authUser(false);
+    const auth = false;
+    this.props.authUser(auth);
     history.push("/");
   };
 
   render() {
     const { auth } = this.props;
+
     return (
       <Container>
         <Brand to="/">

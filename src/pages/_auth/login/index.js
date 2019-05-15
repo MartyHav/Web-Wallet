@@ -32,6 +32,7 @@ class Login extends Component {
   handleChange = event => {
     const name = event.target.name;
     const value = event.target.value;
+
     this.setState({
       [name]: value
     });
@@ -45,7 +46,7 @@ class Login extends Component {
 
     // If invalid set an error state for 2 seconds
     if (valid === false) {
-      this.setState({ error: "Sorry, wrong seed. " });
+      this.setState({ error: "Sorry, that seed is incorrect" });
       setTimeout(() => {
         this.setState({ error: "" });
       }, 2000);
