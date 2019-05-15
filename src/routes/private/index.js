@@ -10,7 +10,7 @@ import Exchange from "../../pages/_wallet/exchange";
 import Transfer from "../../pages/_wallet/transfer";
 import Settings from "../../pages/_wallet/settings";
 
-class Private extends Component {
+class PrivateRoutes extends Component {
   render() {
     return (
       <div>
@@ -24,4 +24,4 @@ class Private extends Component {
   }
 }
 
-export default Private;
+export default PrivateRoutes;

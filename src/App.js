@@ -7,8 +7,8 @@ import history from "./history.js";
 
 // Relative Imports
 import Navigation from "./components/navigation";
-import Private from "./routes/private/index.js";
-import Public from "./routes/public/index.js";
+import PrivateRoutes from "./routes/private/index.js";
+import PublicRoutes from "./routes/public/index.js";
 
 const theme = {
   dark: {
@@ -50,14 +50,10 @@ class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <Router history={history}>
-          <>
-            <Navigation auth={auth} history={history} />
-            <div>
-              <Public />
-              {!auth && history.push("/")}
-              <Private />
-            </div>
-          </>
+          <Navigation />
+          <PublicRoutes />
+          {!auth && history.push("/")}
+          <PrivateRoutes />
         </Router>
       </ThemeProvider>
     );

@@ -9,7 +9,7 @@ import Faq from "../../pages/_public/faq";
 import Create from "../../pages/_auth/create";
 import Login from "../../pages/_auth/login";
 
-class Public extends Component {
+class PublicRoutes extends Component {
   render() {
     return (
       <div>
@@ -22,4 +22,4 @@ class Public extends Component {
   }
 }
 
-export default Public;
+export default PublicRoutes;
