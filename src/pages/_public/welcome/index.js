@@ -73,8 +73,7 @@ class Welcome extends Component {
       <Page>
         <Container>
           <Microcopy>
-            <Heading>Stable,</Heading>
-            <Heading>Untraceable,</Heading>
+            <Heading>Private, Stable,</Heading>
             <Heading>Money</Heading>
             <Buttons>
               <Link to="/wallet/create" label="Get Haven Vault" />

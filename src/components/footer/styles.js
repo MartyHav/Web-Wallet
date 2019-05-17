@@ -25,7 +25,7 @@ export const Section = styled.div`
 `;
 
 export const Title = styled.div`
-  font-family: Inter-Medium;
+  font-family: Inter-SemiBold;
   font-size: 18px;
   color: ${primary}
   letter-spacing: 0;

@@ -11,6 +11,7 @@ export const Container = styled.div`
   position: fixed;
   align-items: center;
   justify-content: center;
+  -webkit-overflow-scrolling: touch;
 
   ${media.laptop`
     grid-template-columns: 100%;
