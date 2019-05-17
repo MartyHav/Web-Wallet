@@ -4,6 +4,7 @@ import { foreground } from "../../../constants/colors.js";
 
 export const Container = styled.div`
   background: ${foreground};
+  height: auto;
   overflow: scroll;
   display: grid;
   grid-gap: 20px;

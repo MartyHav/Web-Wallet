@@ -25,5 +25,5 @@ export const Amount = styled.div`
   justify-content: center;
   font-size: 36px;
   color: white;
-  font-weight: 800;
+  font-family: Inter-Bold;
 `;

@@ -22,7 +22,7 @@ export const Container = styled.div`
     flex-direction: row;
     bottom: 0;
     position: fixed;
-  `}
+  `};
 `;
 
 export const Balance = styled.div`
