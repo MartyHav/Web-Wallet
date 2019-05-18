@@ -28,7 +28,7 @@ const theme = {
 
 class App extends Component {
   state = {
-    auth: false,
+    auth: true,
     theme: theme.dark
   };
 
@@ -52,7 +52,7 @@ class App extends Component {
         <Router history={history}>
           <Navigation />
           <PublicRoutes />
-          {!auth && history.push("/")}
+          {!auth && history.push("/wallet/assets/XHV")}
           <PrivateRoutes />
         </Router>
       </ThemeProvider>

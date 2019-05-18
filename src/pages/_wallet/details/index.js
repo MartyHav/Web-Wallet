@@ -9,8 +9,9 @@ import Header from "../../../components/_layout/header";
 import Status from "../../../components/_layout/status/";
 import Transaction from "../../../components/transaction";
 import Statistic from "../../../components/statistic";
+import Chart from "../../../components/chart";
 
-import { Chart, History, Row } from "./styles";
+import { History, Row } from "./styles";
 
 class Details extends Component {
   state = {
