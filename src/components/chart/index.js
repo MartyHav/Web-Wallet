@@ -45,7 +45,7 @@ class Chart extends Component {
         {
           backgroundColor: "rgba(114, 137, 218, 0.20)",
           borderColor: "rgba(114, 137, 218, 1)",
-          pointBackgroundColor: "rgba(255, 255, 255, 1)",
+          pointBackgroundColor: "rgba(114, 137, 218, 1)",
           data: [
             0.427421,
             0.405606,
@@ -90,7 +90,7 @@ class Chart extends Component {
     const lastPrice = this.state.data.datasets[0].data[0];
     return (
       <Container>
-        <div>Last Price {lastPrice}</div>
+        <div>Data {lastPrice}</div>
         <Line
           options={{
             responsive: true,
