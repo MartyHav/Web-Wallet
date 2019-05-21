@@ -10,7 +10,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
   grid-column: 1 / 3;
-  border-bottom: 1px solid ${border};
+  border-bottom: 1px solid ${props => props.theme.body.border};
 `;
 
 export const Nav = styled(Link)`

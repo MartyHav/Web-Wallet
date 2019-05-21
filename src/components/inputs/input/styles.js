@@ -15,8 +15,8 @@ export const Container = styled.div`
 `;
 
 export const Field = styled.input`
-  background: #2b2e32;
-  border: 1px solid #4a4d52;
+  background: ${props => props.theme.input.input_background};
+  border: 1px solid ${props => props.theme.input.input_border};
   border-radius: 4px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -24,20 +24,20 @@ export const Field = styled.input`
   padding-right: 16px;
   font-family: Inter-Regular;
   font-size: 16px;
-  color: #ffffff;
+  color: ${props => props.theme.input.input_value};
   line-height: 26px;
   outline: none;
   transition: 500ms;
 
   &:focus {
-    border: 1px solid #5c5f63;
+    border: 1px solid ${props => props.theme.input.input_border_focus};
     transition: 500ms;
   }
 
   &::placeholder {
     font-family: Inter-Regular;
     font-size: 16px;
-    color: #8a8d90;
+    color: ${props => props.theme.input.input_placeholder};
     line-height: 26px;
   }
 `;

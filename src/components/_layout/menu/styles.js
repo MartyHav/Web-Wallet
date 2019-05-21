@@ -6,13 +6,13 @@ import { background, border } from "../../../constants/colors.js";
 const activeClassName = "selected";
 
 export const Container = styled.div`
-  background: ${background};
+  background: ${props => props.theme.body.foreground};
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  border-right: 1px solid ${border};
+  border-right: 1px solid ${props => props.theme.body.border};
 
   ${media.laptop`
     order: 3;
@@ -31,10 +31,10 @@ export const Balance = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #3e4147;
+  border-bottom: 1px solid ${props => props.theme.body.border};
   font-size: 32px;
   font-family: Inter-Bold;
-  color: #ffffff;
+  color: ${props => props.theme.type.primary};
   letter-spacing: 0;
   line-height: 30px;
   margin-top: 68px;
@@ -48,22 +48,22 @@ export const Item = styled(NavLink).attrs({
   activeClassName
 })`
   height: auto;
-  color: #8a8d90;
+  color: ${props => props.theme.type.secondary};
   width: 100%;
   display: flex;
   align-items: center;
   padding: 20px 20px;
-  border-bottom: 1px solid ${border};
+  border-bottom: 1px solid ${props => props.theme.body.border};
   text-decoration: none;
   font-size: 16px;
 
   &:hover {
-    color: white;
+    color: ${props => props.theme.type.primary};
   }
 
   &.${activeClassName} {
-    border-left: 2px solid white;
-    color: #fff;
+    border-left: 3px solid ${props => props.theme.body.active_menu};
+    color: ${props => props.theme.type.primary};
   }
 
   ${media.laptop`
@@ -75,15 +75,14 @@ export const Item = styled(NavLink).attrs({
     background: none;
     align-items: center;
     justify-content: center;
-    border-top: 1px solid ${border};
-    border-right: 1px solid ${border};
+    border-top: 1px solid ${props => props.theme.body.border};
+    border-right: 1px solid ${props => props.theme.body.border};
 
 
     &.${activeClassName} {
-      border-bottom: 1px solid white;
-      color: #fff;
+      border-bottom: 1px solid ${props => props.theme.body.border};
+      color: ${props => props.theme.type.primary};
       border-left: none;
-      font-weight: 600;
     }
 
   `}
