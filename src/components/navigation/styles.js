@@ -6,7 +6,7 @@ export const Container = styled.div`
   z-index: 1000;
   position: fixed;
   width: 100vw;
-  background: ${props => props.theme.body_navigation};
+  background: #26282c;
   display: flex;
   align-items: center;
   justify-content: space-between;

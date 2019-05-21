@@ -13,7 +13,7 @@ import {
 } from "./styles";
 import { Label, Error } from "../../../constants/type.js";
 
-class Dropdown extends React.Component {
+class Theme extends React.Component {
   state = {
     displayMenu: false,
     selected: this.props.placeholder
@@ -35,12 +35,11 @@ class Dropdown extends React.Component {
   renderOptions = () => {
     const { onClick, options } = this.props;
     return options.map(option => {
-      const { asset, ticker } = option;
+      const { theme, value } = option;
       return (
-        <Item key={asset} onClick={() => onClick({ asset, ticker })}>
+        <Item key={value} onClick={() => onClick({ theme, value })}>
           <Row>
-            <Name>{asset}</Name>
-            {ticker ? <Ticker>{ticker}</Ticker> : null}
+            <Name>{value}</Name>
           </Row>
         </Item>
       );
@@ -49,7 +48,7 @@ class Dropdown extends React.Component {
 
   render() {
     const { displayMenu } = this.state;
-    const { label, error, placeholder, value, ticker } = this.props;
+    const { label, error, placeholder, value } = this.props;
 
     return (
       <Container>
@@ -59,14 +58,9 @@ class Dropdown extends React.Component {
         </Labels>
         <Select>
           <Button onClick={this.showDropdownMenu}>
-            {value === "Select Asset" ? (
-              placeholder
-            ) : (
-              <Row>
-                <Name>{value}</Name>
-                <Ticker>{ticker}</Ticker>
-              </Row>
-            )}
+            <Row>
+              <Name>{value}</Name>
+            </Row>
           </Button>
           {displayMenu && <Wrapper>{this.renderOptions()}</Wrapper>}
         </Select>
@@ -75,4 +69,4 @@ class Dropdown extends React.Component {
   }
 }
 
-export default Dropdown;
+export default Theme;

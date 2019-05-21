@@ -10,26 +10,9 @@ import Navigation from "./components/navigation";
 import PrivateRoutes from "./routes/private/index.js";
 import PublicRoutes from "./routes/public/index.js";
 
-const theme = {
-  dark: {
-    body_navigation: "#26282C",
-    body_background: "#36393F",
-    body_foreground: "#2B2E32",
-    type_primary: "#8A8D90",
-    type_secondary: "#fffff"
-  },
-  light: {
-    navigation: "#fafafa",
-    body_navigation: "#fff",
-    background: "#cccccc",
-    foreground: "#ddddd"
-  }
-};
-
 class App extends Component {
   state = {
-    auth: false,
-    theme: theme.dark
+    auth: true
   };
 
   componentDidMount() {
@@ -38,21 +21,14 @@ class App extends Component {
     });
   }
 
-  switchTheme = theme => {
-    this.setState({
-      theme: theme
-    });
-  };
-
   render() {
-    const { theme } = this.state;
     const { auth } = this.props;
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={this.props.theme}>
         <Router history={history}>
           <Navigation />
           <PublicRoutes />
-          {!auth && history.push("/")}
+          {!auth && history.push("/wallet/settings")}
           <PrivateRoutes />
         </Router>
       </ThemeProvider>
@@ -61,7 +37,8 @@ class App extends Component {
 }
 
 export const mapStateToProps = state => ({
-  auth: state.auth
+  auth: state.auth,
+  theme: state.theme
 });
 
 export default connect(mapStateToProps)(App);

@@ -1,6 +1,8 @@
 import { THEME } from "../actions/types.js";
 
-export default function(state = {}, action) {
+const INITIAL_STATE = { theme: "theme.dark" };
+
+export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
     case THEME:
       return action.payload;
