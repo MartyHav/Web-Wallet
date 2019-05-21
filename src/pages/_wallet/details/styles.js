@@ -6,14 +6,6 @@ export const Container = styled.div`
   margin-top: -20px;
 `;
 
-export const Chart = styled.div`
-  grid-column: 1 / 3;
-  height: 400px;
-  width: 100%;
-  border-radius: 4px;
-  background: #2b2e32;
-`;
-
 export const History = styled.div`
   grid-column: 1 / 3;
   height: auto;

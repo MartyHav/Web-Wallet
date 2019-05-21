@@ -17,7 +17,8 @@ export const dark = {
     input_background: "#2b2e32",
     input_value: "#ffffff",
     input_select: "#ffffff",
-    input_foreground: "#27292d"
+    input_foreground: "#27292d",
+    input_error: "f04747"
   }
 };
 
@@ -40,7 +41,8 @@ export const light = {
     input_background: "#F1F2F8",
     input_value: "#384451",
     input_select: "#5c5f63",
-    input_foreground: "#d9dadf"
+    input_foreground: "#d9dadf",
+    input_error: "f04747"
   }
 };
 

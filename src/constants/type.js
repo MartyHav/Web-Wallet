@@ -18,20 +18,20 @@ export const Description = styled.div`
 export const Label = styled.div`
   font-family: Inter-Regular;
   font-size: 14px;
-  color: #8a8d90;
+  color: ${props => props.theme.type.secondary};
 `;
 
 export const Error = styled.div`
   font-family: Inter-Regular;
   font-size: 14px;
-  color: #f04747;
+  color: ${props => props.theme.input.input_error};
   text-align: right;
 `;
 
 export const Information = styled.div`
   font-family: Inter-Regular;
   font-size: 13px;
-  color: #8a8d90;
+  color: ${props => props.theme.type.secondary};
   line-height: 22px;
 `;
 

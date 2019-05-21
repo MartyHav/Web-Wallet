@@ -5,5 +5,6 @@ export const Container = styled.div`
   height: auto;
   width: 100%;
   border-radius: 4px;
-  background: #2b2e32;
+  background: ${props => props.theme.body.foreground};
+  border: 1px solid ${props => props.theme.body.border};
 `;

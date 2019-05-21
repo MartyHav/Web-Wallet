@@ -9,7 +9,8 @@ export const Container = styled.a`
   margin-bottom: 20px;
   text-decoration: none;
   border-radius: 4px;
-  background: ${background};
+  background: ${props => props.theme.body.foreground};
+  border: 1px solid ${props => props.theme.body.border};
 
   &:hover {
     cursor: pointer;
@@ -36,8 +37,8 @@ export const Cell = styled.div`
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  background: #2b2e32;
-  border: 1px solid #3a4048;
+  background: ${props => props.theme.body.background};
+  border: 1px solid ${props => props.theme.body.border};
   border-radius: 0px 4px 4px 0x;
   padding: 16px;
   border-right: none;
@@ -48,8 +49,9 @@ export const State = styled.div`
   height: auto;
   display: flex;
   align-items: center;
+  color: #fff;
   justify-content: center;
-  border: 1px solid #3a4048;
+  border-right: 1px solid ${props => props.theme.body.border};
   border-radius: 4px 0px 0px 4px;
   border-right: none;
   background: ${props => {
@@ -67,7 +69,7 @@ export const Status = styled.div`
   transform: rotate(-90deg);
   font-family: Inter-SemiBold;
   font-size: 10px;
-  color: #2b2e32;
+  /* color: #2b2e32; */
   letter-spacing: 0;
   text-align: center;
   line-height: 16px;
@@ -77,7 +79,7 @@ export const Status = styled.div`
 export const Value = styled.div`
   font-family: Inter-SemiBold;
   font-size: 14px;
-  color: #ffffff;
+  color: ${props => props.theme.type.primary};
   letter-spacing: 0;
   line-height: 24px;
   text-align: ${props => props.alignment};
@@ -86,7 +88,7 @@ export const Value = styled.div`
 export const Label = styled.div`
   font-family: Inter-Regular;
   font-size: 12px;
-  color: #8a8d90;
+  color: ${props => props.theme.type.secondary};
   line-height: 12px;
   text-align: ${props => props.alignment};
 `;
