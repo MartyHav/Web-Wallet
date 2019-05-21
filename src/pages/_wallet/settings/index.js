@@ -13,25 +13,12 @@ import Input from "../../../components/inputs/input";
 import Form from "../../../components/inputs/form";
 import Theme from "../../../components/inputs/theme";
 
-const options = [
-  { theme: "theme.dark", value: "Dark Theme" },
-  { theme: "theme.light", value: "Light Theme" }
-];
+import { dark, light } from "../../../constants/themes.js";
 
-const dark = {
-  body_navigation: "#26282C",
-  body_background: "#36393F",
-  body_foreground: "#2B2E32",
-  type_primary: "#8A8D90",
-  type_secondary: "#fffff"
-};
-const light = {
-  body_navigation: "#fff",
-  body_background: "#fff",
-  body_foreground: "#fff",
-  type_primary: "#fff",
-  type_secondary: "#fff"
-};
+const options = [
+  { theme: "dark", value: "Dark Theme" },
+  { theme: "light", value: "Light Theme" }
+];
 
 class Settings extends Component {
   state = {
@@ -44,12 +31,12 @@ class Settings extends Component {
   }
 
   handleClick = ({ theme, value }) => {
-    if (theme === "theme.light") {
+    if (theme === "light") {
       this.props.selectTheme(light);
       this.setState({
         value: value
       });
-    } else if (theme === "theme.dark") {
+    } else if (theme === "dark") {
       this.props.selectTheme(dark);
       this.setState({
         value: value
@@ -70,6 +57,7 @@ class Settings extends Component {
 
           <Form span="true">
             <Theme
+              width="true"
               label="Select Theme"
               placeholder="Dark Theme"
               name="value"
@@ -77,7 +65,7 @@ class Settings extends Component {
               options={options}
               onClick={this.handleClick}
             />
-            <Input label="Language" placeholder="Enter amount" width="true" />
+            <Input label="Language" placeholder="Enter amount" />
           </Form>
           <Header title="Private Keys" description="Lorem impsum" />
           <Form span="true">

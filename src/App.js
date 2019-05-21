@@ -12,7 +12,8 @@ import PublicRoutes from "./routes/public/index.js";
 
 class App extends Component {
   state = {
-    auth: true
+    auth: true,
+    theme: {}
   };
 
   componentDidMount() {

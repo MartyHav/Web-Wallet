@@ -20,7 +20,6 @@ export const Select = styled.div`
   background: #2b2e32;
   border: 1px solid #4a4d52;
   border-radius: 4px;
-  grid-column: 1 / 3;
 
   transition: 500ms;
 
@@ -42,7 +41,7 @@ export const Wrapper = styled.ul`
   left: 0px;
   width: auto;
   position: absolute;
-  grid-column: 1 / 3;
+
   border-radius: 4px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;

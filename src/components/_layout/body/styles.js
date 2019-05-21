@@ -3,7 +3,7 @@ import media from "../../../constants/media.js";
 import { foreground } from "../../../constants/colors.js";
 
 export const Container = styled.div`
-  background: ${props => props.theme.body_navigation};
+  background: ${props => props.theme.body_background};
   height: auto;
   overflow: scroll;
   display: grid;

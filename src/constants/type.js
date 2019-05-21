@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Title = styled.div`
   font-family: Inter-SemiBold;
   font-size: 20px;
-  color: #ffffff;
+  color: ${props => props.theme.primary};
   letter-spacing: 0;
   line-height: 30px;
 `;
@@ -11,7 +11,7 @@ export const Title = styled.div`
 export const Description = styled.div`
   font-family: Inter-Regular;
   font-size: 14px;
-  color: #8a8d90;
+  color: ${props => props.theme.secondary};
   line-height: 24px;
 `;
 
