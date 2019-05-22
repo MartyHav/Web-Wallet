@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import { Error as ErrorLabel } from "../../../constants/type.js";
 
-export const Error = styled(ErrorLabel)``;
+export const Error = styled.div`
+  font-family: Inter-Regular;
+  font-size: 14px;
+  color: #f04747;
+  text-align: right;
+`;
 
 export const Container = styled.div`
   width: auto;

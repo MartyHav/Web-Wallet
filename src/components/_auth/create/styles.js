@@ -33,6 +33,21 @@ export const Header = styled.div`
   border-bottom: 1px solid ${border};
 `;
 
+export const Title = styled.div`
+  font-family: Inter-SemiBold;
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: 30px;
+`;
+
+export const Description = styled.div`
+  font-family: Inter-Regular;
+  font-size: 14px;
+  color: #8a8d90;
+  line-height: 24px;
+`;
+
 export const Progress = styled.div`
   display: grid;
   background: ${background};

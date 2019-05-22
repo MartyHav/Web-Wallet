@@ -15,9 +15,10 @@ import {
   Label,
   Progress,
   Step,
-  Back
+  Back,
+  Title,
+  Description
 } from "./styles";
-import { Title, Description } from "../../../constants/type.js";
 
 const Create = ({
   title,
