@@ -53,7 +53,6 @@ class Settings extends Component {
   render() {
     const { status, value } = this.state;
     const { seedPhrase, privateKey, spendKey, viewKey } = this.props.user;
-    console.log("AUTH SETTINGS", this.props.user.auth);
     return (
       <Page>
         <Menu />

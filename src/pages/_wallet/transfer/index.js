@@ -70,10 +70,6 @@ class Exchange extends Component {
       loading
     } = this.state;
 
-    console.log("SEND ASSET", send_asset);
-    console.log("SEND AMOUNT", send_amount);
-    console.log("RECIPIENT", recipient_address);
-
     return (
       <Page>
         <Menu />
