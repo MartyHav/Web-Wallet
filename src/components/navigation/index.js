@@ -18,16 +18,15 @@ class Navigation extends Component {
       viewKey: ""
     };
     this.props.currentUser(user);
-    setTimeout(() => {
-      history.push("/wallet/assets");
-    }, 2000);
+
+    history.push("/wallet/assets");
   };
 
   render() {
     const { auth } = this.props.user;
     return (
       <Container>
-        <Brand to="/">
+        <Brand to={auth === true ? "/wallet/assets" : "/"}>
           <Logo src={Icon} />
           <Haven>HAVEN</Haven>
         </Brand>

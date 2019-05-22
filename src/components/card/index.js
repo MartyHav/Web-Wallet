@@ -4,9 +4,9 @@ import React from "react";
 // Relative Imports
 import { Container, Header, Title, Subtitle, Row, Graph } from "./styles";
 
-const Card = ({ key, tokenName, ticker, price, change }) => {
+const Card = ({ tokenName, ticker, price, change }) => {
   return (
-    <Container to={`/wallet/assets/${ticker}`} key={key}>
+    <Container to={`/wallet/assets/${ticker}`}>
       <Header>
         <Row>
           <Title left>{ticker}</Title>
