@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import history from "../../../history.js";
 import { connect } from "react-redux";
-import { authUser } from "../../../actions";
+import { currentUser } from "../../../actions";
 
 // Relative Imports
 import { Container } from "./styles";
@@ -21,13 +21,13 @@ class Login extends Component {
     error: ""
   };
 
-  componentDidMount() {
-    // Comes form Redux
-    const { auth } = this.props;
-    this.setState({
-      auth: auth
-    });
-  }
+  // componentDidMount() {
+  //   // Comes form Redux
+  //   const { auth } = this.props;
+  //   this.setState({
+  //     auth: auth
+  //   });
+  // }
 
   handleChange = event => {
     const name = event.target.name;
@@ -54,15 +54,22 @@ class Login extends Component {
       // If valid then set the state to loading and auth to true
 
       this.setState({
-        loading: true,
-        auth: true
+        loading: true
       });
+
+      const user = {
+        auth: true,
+        seedPhrase: "abc",
+        privateKey: "1234",
+        spendKey: "5678",
+        viewKey: "9876"
+      };
 
       // After 2.5s redirect the user. This is to simulate aysnc request
       setTimeout(() => {
-        this.state.auth && history.push("/wallet/assets");
+        history.push("/wallet/assets");
         // Also push true into Redux for App.js to use
-        this.props.authUser(true);
+        this.props.currentUser(user);
       }, 2500);
     }
   };
@@ -109,5 +116,5 @@ export const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { authUser }
+  { currentUser }
 )(Login);

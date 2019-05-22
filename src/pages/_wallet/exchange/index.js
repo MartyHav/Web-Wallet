@@ -85,7 +85,7 @@ class Exchange extends Component {
     return (
       <Page>
         <Menu />
-        <Body span>
+        <Body>
           <Header title="Exchange " description="Lorem impsum" />
           <Form onSubmit={this.handleSubmit}>
             <Dropdown

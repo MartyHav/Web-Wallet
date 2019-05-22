@@ -16,22 +16,22 @@ class App extends Component {
     theme: {}
   };
 
-  componentDidMount() {
-    this.setState({
-      auth: this.props.user.auth
-    });
-  }
+  // componentDidMount() {
+  //   this.setState({
+  //     auth: this.props.user.auth
+  //   });
+  // }
 
   render() {
     const { auth } = this.props.user;
-    console.log("APP SETTINGS", auth);
+    console.log("APP SETTINGS", this.props.user);
 
     return (
       <ThemeProvider theme={this.props.theme}>
         <Router history={history}>
           <Navigation />
           <PublicRoutes />
-          {!auth && history.push("/wallet/create")}
+          {!auth && history.push("/")}
           <PrivateRoutes />
         </Router>
       </ThemeProvider>

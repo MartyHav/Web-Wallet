@@ -57,10 +57,10 @@ class Settings extends Component {
     return (
       <Page>
         <Menu />
-        <Body span>
+        <Body>
           <Header title="Settings" description="Lorem impsum" />
 
-          <Form span="true">
+          <Form>
             <Theme
               width="true"
               label="Select Theme"

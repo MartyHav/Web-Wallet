@@ -27,7 +27,7 @@ class Exchange extends Component {
     send_asset: "Select Asset",
     send_amount: "",
     send_ticker: "",
-    recipient_address: null,
+    recipient_address: "",
     validated: true,
     time: 7
   };
@@ -70,12 +70,16 @@ class Exchange extends Component {
       loading
     } = this.state;
 
+    console.log("SEND ASSET", send_asset);
+    console.log("SEND AMOUNT", send_amount);
+    console.log("RECIPIENT", recipient_address);
+
     return (
       <Page>
         <Menu />
-        <Body span>
+        <Body>
           <Header title="Transfer" description="Lorem impsum" />
-          <Form span="true">
+          <Form>
             <Dropdown
               label="Send Asset"
               placeholder="Select Asset"

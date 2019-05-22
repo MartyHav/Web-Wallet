@@ -1,7 +1,7 @@
 // Library Imports
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { authUser } from "../../actions/index.js";
+import { authUser, currentUser } from "../../actions/index.js";
 import history from "../../history.js";
 
 // Relative Imports
@@ -10,14 +10,21 @@ import Icon from "../../assets/haven.svg";
 
 class Navigation extends Component {
   handleLogout = () => {
-    const auth = false;
-    this.props.authUser(auth);
-    history.push("/");
+    const user = {
+      auth: false,
+      seedPhrase: "",
+      privateKey: "",
+      spendKey: "",
+      viewKey: ""
+    };
+    this.props.currentUser(user);
+    setTimeout(() => {
+      history.push("/wallet/assets");
+    }, 2000);
   };
 
   render() {
-    const { auth } = this.props;
-
+    const { auth } = this.props.user;
     return (
       <Container>
         <Brand to="/">
@@ -35,10 +42,10 @@ class Navigation extends Component {
 }
 
 export const mapStateToProps = state => ({
-  auth: state.auth
+  user: state.user
 });
 
 export default connect(
   mapStateToProps,
-  { authUser }
+  { authUser, currentUser }
 )(Navigation);
