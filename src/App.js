@@ -12,19 +12,11 @@ import PublicRoutes from "./routes/public/index.js";
 
 class App extends Component {
   state = {
-    // auth: false,
     theme: {}
   };
 
-  // componentDidMount() {
-  //   this.setState({
-  //     auth: this.props.user.auth
-  //   });
-  // }
-
   render() {
     const { auth } = this.props.user;
-    console.log("APP SETTINGS", this.props.user);
 
     return (
       <ThemeProvider theme={this.props.theme}>
@@ -40,7 +32,6 @@ class App extends Component {
 }
 
 export const mapStateToProps = state => ({
-  auth: state.auth,
   theme: state.theme,
   user: state.user
 });
