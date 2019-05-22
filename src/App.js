@@ -12,11 +12,12 @@ import PublicRoutes from "./routes/public/index.js";
 
 class App extends Component {
   state = {
-    auth: true,
+    auth: false,
     theme: {}
   };
 
   componentDidMount() {
+    console.log("USER", this.props.user);
     this.setState({
       auth: this.props.auth
     });
@@ -29,7 +30,7 @@ class App extends Component {
         <Router history={history}>
           <Navigation />
           <PublicRoutes />
-          {!auth && history.push("/wallet/settings")}
+          {!auth && history.push("/wallet/create")}
           <PrivateRoutes />
         </Router>
       </ThemeProvider>
@@ -39,7 +40,8 @@ class App extends Component {
 
 export const mapStateToProps = state => ({
   auth: state.auth,
-  theme: state.theme
+  theme: state.theme,
+  user: state.user
 });
 
 export default connect(mapStateToProps)(App);
