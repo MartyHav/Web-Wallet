@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Error as ErrorLabel } from "../../../constants/type.js";
 
 export const Error = styled.div`
   font-family: Inter-Regular;

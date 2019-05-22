@@ -13,7 +13,8 @@ const Input = ({
   onChange,
   name,
   value,
-  width
+  width,
+  readOnly
 }) => {
   return (
     <Container width={width}>
@@ -27,6 +28,7 @@ const Input = ({
         name={name}
         onChange={onChange}
         placeholder={placeholder}
+        readOnly={readOnly}
       />
     </Container>
   );

@@ -1,7 +1,7 @@
 // Library Imports
 import React, { Component } from "react";
 import history from "../../../history.js";
-import { authUser } from "../../../actions";
+import { authUser, currentUser } from "../../../actions";
 import { connect } from "react-redux";
 
 // Relative Imports
@@ -51,13 +51,21 @@ class Create extends Component {
     }
     // On step three, if seed is valid, set loading to true and push true to authUser reducer
     else if (stepThree && valid) {
-      const auth = true;
+      // const auth = true;
 
       this.setState({
         loading: true
       });
       setTimeout(() => {
-        this.props.authUser(auth);
+        const user = {
+          auth: true,
+          seedPhrase: "abc",
+          privateKey: "1234",
+          spendKey: "5678",
+          viewKey: "9876"
+        };
+        // this.props.authUser(auth);
+        this.props.currentUser(user);
         history.push("/wallet/assets");
       }, 2500);
     } else {
@@ -131,5 +139,5 @@ export const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { authUser }
+  { authUser, currentUser }
 )(Create);

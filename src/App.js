@@ -12,19 +12,20 @@ import PublicRoutes from "./routes/public/index.js";
 
 class App extends Component {
   state = {
-    auth: false,
+    // auth: false,
     theme: {}
   };
 
   componentDidMount() {
-    console.log("USER", this.props.user);
     this.setState({
-      auth: this.props.auth
+      auth: this.props.user.auth
     });
   }
 
   render() {
-    const { auth } = this.props;
+    const { auth } = this.props.user;
+    console.log("APP SETTINGS", auth);
+
     return (
       <ThemeProvider theme={this.props.theme}>
         <Router history={history}>

@@ -52,7 +52,8 @@ class Settings extends Component {
 
   render() {
     const { status, value } = this.state;
-
+    const { seedPhrase, privateKey, spendKey, viewKey } = this.props.user;
+    console.log("AUTH SETTINGS", this.props.user.auth);
     return (
       <Page>
         <Menu />
@@ -77,14 +78,30 @@ class Settings extends Component {
               label="Seed Phrase"
               placeholder="Select Asset"
               width="true"
+              value={seedPhrase}
+              readOnly
             />
             <Input
               label="Private Key"
               placeholder="Enter amount"
               width="true"
+              value={privateKey}
+              readOnly
             />
-            <Input label="Spend Key" placeholder="Select Asset" width="true" />
-            <Input label="View Key" placeholder="Select Asset" width="true" />
+            <Input
+              label="Spend Key"
+              placeholder="Select Asset"
+              width="true"
+              value={spendKey}
+              readOnly
+            />
+            <Input
+              label="View Key"
+              placeholder="Select Asset"
+              width="true"
+              value={viewKey}
+              readOnly
+            />
           </Form>
         </Body>
         {status ? <Status>Pending transaction</Status> : null}
@@ -94,7 +111,8 @@ class Settings extends Component {
 }
 
 export const mapStateToProps = state => ({
-  theme: state.theme
+  theme: state.theme,
+  user: state.user
 });
 
 export default connect(

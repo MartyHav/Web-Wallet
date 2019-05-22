@@ -7,7 +7,6 @@ import {
   Item,
   Button,
   Labels,
-  Ticker,
   Name,
   Row
 } from "./styles";
@@ -48,7 +47,7 @@ class Theme extends React.Component {
 
   render() {
     const { displayMenu } = this.state;
-    const { label, error, placeholder, value } = this.props;
+    const { label, error, value } = this.props;
 
     return (
       <Container>

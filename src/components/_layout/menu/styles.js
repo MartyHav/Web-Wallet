@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import media from "../../../constants/media.js";
 import { NavLink } from "react-router-dom";
-import { background, border } from "../../../constants/colors.js";
 
 const activeClassName = "selected";
 

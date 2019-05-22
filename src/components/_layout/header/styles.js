@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { secondary, border } from "../../../constants/colors.js";
+import { secondary } from "../../../constants/colors.js";
 import { Link } from "react-router-dom";
 
 export const Container = styled.div`

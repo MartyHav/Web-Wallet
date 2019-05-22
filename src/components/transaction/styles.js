@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { background } from "../../constants/colors.js";
 
 export const Container = styled.a`
   height: auto;

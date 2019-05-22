@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import media from "../../../constants/media.js";
-import { foreground } from "../../../constants/colors.js";
 
 export const Container = styled.div`
   background: ${props => props.theme.body.background};
