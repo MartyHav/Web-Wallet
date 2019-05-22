@@ -1,4 +1,5 @@
 export const dark = {
+  value: "Dark Theme",
   body: {
     navigation: "#26282C",
     background: "#36393F",
@@ -23,6 +24,7 @@ export const dark = {
 };
 
 export const light = {
+  value: "Light Theme",
   body: {
     navigation: "red",
     background: "#F7F7FB",
@@ -45,32 +47,3 @@ export const light = {
     input_error: "f04747"
   }
 };
-
-// module.exports = {
-//   background: "#2B2E34",
-//   background_hover: "#27292f",
-//   foreground: "#36393F",
-//   foreground_hover: "#313339",
-//   border: "#3A4048",
-//   primary: "#ffffff",
-//   secondary: "#8A8D90",
-//   link: "#34D8AC",
-//   link_hover: "#2aad8a",
-//   button: "#7289DA"
-// };
-
-// export const dark = {
-//   body_navigation: "#26282C",
-//   body_background: "#36393F",
-//   body_foreground: "#2B2E32",
-//   primary: "#ffffff",
-//   secondary: "#8a8d90"
-// };
-//
-// export const light = {
-//   body_navigation: "#ccc",
-//   body_background: "#F7F7FB",
-//   body_foreground: "#F1F2F8",
-//   type_primary: "#384451",
-//   type_secondary: "#646D78"
-// };

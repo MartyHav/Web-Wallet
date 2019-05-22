@@ -75,6 +75,7 @@ export const Item = styled(NavLink).attrs({
     background: none;
     align-items: center;
     justify-content: center;
+    z-index: 5000;
     border-top: 1px solid ${props => props.theme.body.border};
     border-right: 1px solid ${props => props.theme.body.border};
 

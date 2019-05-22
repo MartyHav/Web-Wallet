@@ -23,14 +23,18 @@ const options = [
 class Settings extends Component {
   state = {
     status: false,
-    value: "Dark Theme"
+    value: ""
   };
 
   componentDidMount() {
     window.scrollTo(0, 0);
+    this.setState({
+      value: this.props.theme.value
+    });
   }
 
   handleClick = ({ theme, value }) => {
+    console.log("THEME", theme);
     if (theme === "light") {
       this.props.selectTheme(light);
       this.setState({

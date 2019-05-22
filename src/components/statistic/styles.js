@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: ${props => props.theme.body.background};
+  background: ${props => props.theme.body.foreground};
   border: 1px solid ${props => props.theme.body.border};
   border-radius: 4px;
   padding: 16px;

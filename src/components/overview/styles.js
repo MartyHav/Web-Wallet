@@ -4,8 +4,8 @@ import media from "../../constants/media.js";
 export const Container = styled.div`
   height: auto;
   width: auto;
-  background: #2b2e32;
-  border: 1px solid #3a4048;
+  background: ${props => props.theme.body.foreground};
+  border: 1px solid ${props => props.theme.body.border};
   border-radius: 4px;
   display: none;
   padding: 20px;
@@ -24,6 +24,6 @@ export const Amount = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 36px;
-  color: white;
+  color: ${props => props.theme.type.primary};
   font-family: Inter-Bold;
 `;
