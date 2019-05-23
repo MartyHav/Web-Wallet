@@ -16,7 +16,7 @@ export const Container = styled.div`
   ${media.laptop`
     order: 1;
     grid-template-columns: 1fr;
-
+    -webkit-overflow-scrolling: touch;
   `};
 `;
 

@@ -16,14 +16,15 @@ class App extends Component {
   };
 
   render() {
-    const { auth } = this.props.user;
+    // const { auth } = this.props.user;
+    const auth = true;
 
     return (
       <ThemeProvider theme={this.props.theme}>
         <Router history={history}>
           <Navigation />
           <PublicRoutes />
-          {!auth && history.push("/")}
+          {!auth && history.push("/wallet/assets/XHV")}
           <PrivateRoutes />
         </Router>
       </ThemeProvider>

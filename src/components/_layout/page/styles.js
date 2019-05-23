@@ -18,6 +18,6 @@ export const Container = styled.div`
 `;
 
 // ${media.mobile`
-//   -webkit-overflow-scrolling: touch;
+//
 //   scroll-behavior: smooth;
 // `}

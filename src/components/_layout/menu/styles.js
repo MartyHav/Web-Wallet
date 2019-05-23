@@ -12,6 +12,7 @@ export const Container = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   border-right: 1px solid ${props => props.theme.body.border};
+  z-index: 5000;
 
   ${media.laptop`
     order: 3;

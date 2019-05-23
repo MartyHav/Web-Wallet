@@ -28,6 +28,7 @@ export const Field = styled.input`
   line-height: 26px;
   outline: none;
   transition: 500ms;
+  -webkit-appearance: none;
 
   &:focus {
     border: 1px solid ${props => props.theme.input.input_border_focus};

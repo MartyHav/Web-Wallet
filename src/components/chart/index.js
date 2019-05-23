@@ -83,14 +83,13 @@ class Chart extends Component {
     }
   };
 
-  handleState = price => {
-    console.log("Price", price);
+  doSomething = value => {
+    alert(value);
   };
+
   render() {
-    const lastPrice = this.state.data.datasets[0].data[0];
     return (
       <Container>
-        <div>Data {lastPrice}</div>
         <Line
           options={{
             responsive: true,
@@ -100,22 +99,36 @@ class Chart extends Component {
             legend: {
               display: false
             },
-
             scales: {
               yAxes: [{ display: false }],
               xAxes: [{ display: false }]
             },
             tooltips: {
+              yAlign: "bottom",
+              xAlign: "center",
+              xPadding: 20,
+              yPadding: 15,
+              bodyAlign: "center",
+              footerAlign: "center",
               displayColors: false,
-              callbacks: {
-                label: function(tooltipItems, data) {
-                  const price = data.datasets[0].data[tooltipItems.index];
-                  return price;
-
-                  // return console.log(data.labels[tooltipItems.index]);
-                  // return console.log(data.datasets[0].data[tooltipItems.index]);
-                }
-              }
+              titleFontSize: 18,
+              bodyFontSize: 14,
+              titleMarginBottom: 8,
+              titleFontColor: "#fff",
+              background: "rgba(21, 35, 44, 08)",
+              bodyFontColor: "#999",
+              bodySpacing: 10,
+              titleFontFamily:
+                "Inter-SemiBold, 'Helvetica', 'Arial', sans-serif",
+              bodyFontFamily: "Inter-SemiBold, 'Helvetica', 'Arial', sans-serif"
+              // callbacks: {
+              //   label: function(tooltipItems, data) {
+              //     return alert(data.datasets[0].data[tooltipItems.index]);
+              //
+              //     // return console.log(data.labels[tooltipItems.index]);
+              //     // return console.log(data.datasets[0].data[tooltipItems.index]);
+              //   }
+              // }
             }
           }}
           data={this.state.data}
