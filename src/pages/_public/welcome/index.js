@@ -26,11 +26,6 @@ import Button from "../../../components/buttons/button";
 import api from "../../../constants/data.js";
 
 class Welcome extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   // this.myRef = React.createRef();
-  // }
-
   componentDidMount() {
     window.scrollTo(0, 0);
   }
