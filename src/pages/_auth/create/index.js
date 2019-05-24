@@ -59,10 +59,14 @@ class Create extends Component {
       setTimeout(() => {
         const user = {
           auth: true,
-          seedPhrase: "abc",
-          privateKey: "1234",
-          spendKey: "5678",
-          viewKey: "9876"
+          seedPhrase:
+            "5b9b3c29734c60540d551eab0e7daa9b24cdf4be845f6cb8b457fc047deffe6a",
+          privateKey:
+            "df008d3b68990dcf4b7c7ee2876b076e962780ed3d1d3cb01e57c5c9913222b1",
+          spendKey:
+            "8ac0f2094ed292a5ca0bd65055475b182e33e09b4017d67b2a817f88a831b52e",
+          viewKey:
+            "dcbce83bf1ac67579757b080a9bc096e487e2a039086b1e2caeffca9ae1a3862"
         };
         // this.props.authUser(auth);
         this.props.currentUser(user);

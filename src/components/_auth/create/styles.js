@@ -67,7 +67,7 @@ export const Step = styled.div`
 `;
 
 export const Body = styled.div`
-  height: 266px;
+  min-height: 266px;
   width: auto;
   margin: 10px;
 `;

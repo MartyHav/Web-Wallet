@@ -33,6 +33,7 @@ export const Field = styled.textarea.attrs({
   resize: none;
   outline: none;
   transition: 500ms;
+  -webkit-appearance: none;
 
   &:focus {
     border: 1px solid #5c5f63;

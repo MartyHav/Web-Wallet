@@ -9,6 +9,7 @@ import Body from "../../../components/_layout/body";
 import Menu from "../../../components/_layout/menu";
 import Header from "../../../components/_layout/header";
 import Status from "../../../components/_layout/status/";
+import Toggle from "../../../components/inputs/toggle";
 import Input from "../../../components/inputs/input";
 import Form from "../../../components/inputs/form";
 import Theme from "../../../components/inputs/theme";
@@ -23,7 +24,8 @@ const options = [
 class Settings extends Component {
   state = {
     status: false,
-    value: ""
+    value: "",
+    reveal: false
   };
 
   componentDidMount() {
@@ -34,7 +36,6 @@ class Settings extends Component {
   }
 
   handleClick = ({ theme, value }) => {
-    console.log("THEME", theme);
     if (theme === "light") {
       this.props.selectTheme(light);
       this.setState({
@@ -50,18 +51,22 @@ class Settings extends Component {
     }
   };
 
+  toggleVisibility = () => {
+    this.setState({
+      reveal: !this.state.reveal
+    });
+  };
+
   render() {
-    const { status, value } = this.state;
+    const { status, value, type, reveal } = this.state;
     const { seedPhrase, privateKey, spendKey, viewKey } = this.props.user;
     return (
       <Page>
         <Menu />
         <Body>
           <Header title="Settings" description="Lorem impsum" />
-
-          <Form>
+          <Form span="true">
             <Theme
-              width="true"
               label="Select Theme"
               placeholder="Dark Theme"
               name="value"
@@ -69,37 +74,47 @@ class Settings extends Component {
               options={options}
               onClick={this.handleClick}
             />
-            <Input label="Language" placeholder="Enter amount" />
           </Form>
+
           <Header title="Private Keys" description="Lorem impsum" />
           <Form span="true">
-            <Input
+            <Toggle
               label="Seed Phrase"
               placeholder="Select Asset"
               width="true"
               value={seedPhrase}
               readOnly
+              type={type}
+              reveal={reveal}
+              attrs={reveal}
+              onClick={this.toggleVisibility}
             />
-            <Input
+            <Toggle
               label="Private Key"
               placeholder="Enter amount"
               width="true"
               value={privateKey}
               readOnly
+              reveal={reveal}
+              type={type}
             />
-            <Input
+            <Toggle
               label="Spend Key"
               placeholder="Select Asset"
               width="true"
               value={spendKey}
               readOnly
+              reveal={reveal}
+              type={type}
             />
-            <Input
+            <Toggle
               label="View Key"
               placeholder="Select Asset"
               width="true"
               value={viewKey}
               readOnly
+              reveal={reveal}
+              type={type}
             />
           </Form>
         </Body>
