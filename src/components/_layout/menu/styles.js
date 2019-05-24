@@ -7,12 +7,12 @@ const activeClassName = "selected";
 export const Container = styled.div`
   background: ${props => props.theme.body.foreground};
   height: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   border-right: 1px solid ${props => props.theme.body.border};
-  z-index: 5000;
 
   ${media.laptop`
     order: 3;
@@ -22,6 +22,7 @@ export const Container = styled.div`
     flex-direction: row;
     bottom: 0;
     position: fixed;
+    z-index: 5000;
   `};
 `;
 

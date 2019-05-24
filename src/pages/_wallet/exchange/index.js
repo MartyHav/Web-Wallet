@@ -44,6 +44,27 @@ class Exchange extends Component {
     this.setState({
       [name]: value
     });
+
+    /*
+    const sendAmount =
+    const sendRate =
+    const recieveAmount =
+    const recieveRate =
+
+    if (sending) {
+    const exchangeAmount - sendAmount * recieveRate
+    this.setState({
+      sendAmount: sendAmount,
+      exchangeAmount: exchangeAmount
+    });
+  } else if (receiving)
+    const exchangeAmount = recieveAmount / sendRate
+    this.setState({
+      sendAmount: sendAmount,
+      exchangeAmount: exchangeAmount
+    });
+  };
+  */
   };
 
   setSendAsset = ({ asset, ticker }) => {
@@ -106,7 +127,7 @@ class Exchange extends Component {
               onChange={this.handleChange}
             />
             <Dropdown
-              label="Recieve Asset"
+              label="Receive Asset"
               placeholder="Select Asset"
               name="receive_asset"
               value={receive_asset}
@@ -115,7 +136,7 @@ class Exchange extends Component {
               onClick={this.setReceiveAsset}
             />
             <Input
-              label="Recieve Amount"
+              label="Receeve Amount"
               placeholder="Enter amount"
               name="receive_amount"
               type="number"
