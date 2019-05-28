@@ -2,14 +2,26 @@
 import React from "react";
 
 // Relative Imports
-import { Container, Image, Words, Description, LearnMore } from "./styles";
+import {
+  Container,
+  Image,
+  Words,
+  Description,
+  LearnMore,
+  Test
+} from "./styles";
 import { Header } from "../../constants/type.js";
+import how from "../../assets/how.svg";
+import what from "../../assets/what.svg";
+import why from "../../assets/why.svg";
 
 const Content = ({ ref }) => {
   return (
     <>
       <Container ref={ref}>
-        <Image>First </Image>
+        <Test reverse>
+          <Image src={what} />
+        </Test>
         <Words>
           <Header>
             What is <br />
@@ -30,7 +42,9 @@ const Content = ({ ref }) => {
         </Words>
       </Container>
       <Container reverse>
-        <Image reverse>First </Image>
+        <Test reverse>
+          <Image src={how} />
+        </Test>
         <Words reverse>
           <Header>
             How does <br />
@@ -51,7 +65,9 @@ const Content = ({ ref }) => {
         </Words>
       </Container>
       <Container>
-        <Image>First </Image>
+        <Test>
+          <Image reverse src={why} />
+        </Test>
         <Words>
           <Header>
             Why should I <br />

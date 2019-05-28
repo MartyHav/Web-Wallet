@@ -1,6 +1,5 @@
 // Library Imports
 import React, { Component } from "react";
-// import { Line } from "react-chartjs-2";
 
 // Relative Imports
 import {
@@ -22,8 +21,10 @@ import Footer from "../../../components/footer";
 import Content from "../../../components/content";
 import Link from "../../../components/buttons/link";
 import Button from "../../../components/buttons/button";
+import ChartSingle from "../../../components/chart-single";
 
-import api from "../../../constants/data.js";
+// import api from "../../../constants/data.js";
+import api from "../../../constants/priceData.js";
 
 class Welcome extends Component {
   componentDidMount() {
@@ -45,17 +46,18 @@ class Welcome extends Component {
     const { oracle } = this.state;
 
     return oracle.map(info => {
-      const { token, ticker, price, change } = info;
+      const { token, ticker, date, data } = info;
+      console.log("ticker", ticker);
       return (
         <Cards key={token}>
           <Header>
             <Section>
               <Title left>{ticker}</Title>
-              <Title>{price}</Title>
+              <Title>{data[0]}</Title>
             </Section>
             <Section>
               <Subtitle>{token}</Subtitle>
-              <Subtitle>{change}</Subtitle>
+              <Subtitle>0.00%</Subtitle>
             </Section>
           </Header>
         </Cards>

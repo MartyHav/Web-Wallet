@@ -10,7 +10,6 @@ export const Container = styled.div`
   grid-gap: 20px;
   padding: 80px;
   background: ${props => (props.reverse ? "#2b2e34" : "#36393F")};
-
   justify-content: center;
   align-items: center;
 
@@ -20,12 +19,16 @@ export const Container = styled.div`
   `}
 `;
 
-export const Image = styled.div`
-  min-height: 600px;
-  border: 1px dashed #434446;
-  width: auto;
-  padding: 20px;
+export const Image = styled.img`
+  width: 80%;
+  height: 80%;
+`;
+
+export const Test = styled.div`
+  height: 100%;
+  width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
   align-items: center;
   order: ${props => (props.reverse ? 2 : 1)};

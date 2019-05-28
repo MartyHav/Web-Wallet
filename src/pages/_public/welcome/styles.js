@@ -94,8 +94,9 @@ export const Microcopy = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 80px;
   width: auto;
+  height: auto;
 `;
 
 export const Heading = styled.div`
@@ -108,8 +109,8 @@ export const Heading = styled.div`
   margin-left: 8px;
 
   ${media.mobile`
-    font-size: 48px;
-    line-height: 58px;
+    font-size: 4.0em;
+    line-height: 1.2em;
   `};
 `;
 
@@ -121,7 +122,7 @@ export const Buttons = styled.div`
   margin-top: 40px;
 
   ${media.mobile`
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
   `};
 `;
