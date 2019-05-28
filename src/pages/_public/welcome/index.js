@@ -21,7 +21,6 @@ import Footer from "../../../components/footer";
 import Content from "../../../components/content";
 import Link from "../../../components/buttons/link";
 import Button from "../../../components/buttons/button";
-import ChartSingle from "../../../components/chart-single";
 
 // import api from "../../../constants/data.js";
 import api from "../../../constants/priceData.js";
@@ -46,8 +45,7 @@ class Welcome extends Component {
     const { oracle } = this.state;
 
     return oracle.map(info => {
-      const { token, ticker, date, data } = info;
-      console.log("ticker", ticker);
+      const { token, ticker, data } = info;
       return (
         <Cards key={token}>
           <Header>

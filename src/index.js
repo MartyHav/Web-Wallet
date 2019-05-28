@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'zero' 1
 
     @font-face {
      font-family: 'Inter-Regular';

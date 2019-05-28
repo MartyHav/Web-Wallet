@@ -6,6 +6,7 @@
     "axios": "^0.18.0",
     "chart.js": "^2.8.0",
     "moment": "^2.24.0",
+    "monerojs": "^0.1.8",
     "react": "^16.8.6",
     "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.8.6",
@@ -16,6 +17,8 @@
     "react-select": "^2.4.2",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
     "styled-components": "^4.2.0",
     "underscore": "^1.9.1"
   },

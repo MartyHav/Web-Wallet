@@ -10,7 +10,6 @@ import Menu from "../../../components/_layout/menu";
 import Header from "../../../components/_layout/header";
 import Status from "../../../components/_layout/status/";
 import Toggle from "../../../components/inputs/toggle";
-import Input from "../../../components/inputs/input";
 import Form from "../../../components/inputs/form";
 import Theme from "../../../components/inputs/theme";
 
