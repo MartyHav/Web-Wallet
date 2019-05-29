@@ -2,7 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createGlobalStyle } from "styled-components";
-// import * as serviceWorker from "./serviceWorker";
+import * as serviceWorker from "./serviceWorker";
 // Relative Imports
 import App from "./App.js";
 
@@ -40,7 +40,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
     @font-face {
-     font-family: 'Inter-Bold';
+     font-family: 'Inter-Bold';'../public/index.html'
+
      src: url(${interBold});
   }
 
@@ -57,4 +58,4 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
+serviceWorker.register();

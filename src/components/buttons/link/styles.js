@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import media from "../../../constants/media.js";
 
 export const Container = styled(Link)`
   background: #7289da;
@@ -22,4 +23,8 @@ export const Container = styled(Link)`
     cursor: pointer;
     transition: 500ms;
   }
+
+  ${media.mobile`
+    width: 100%;
+  `};
 `;

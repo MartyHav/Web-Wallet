@@ -109,8 +109,8 @@ export const Heading = styled.div`
   margin-left: 8px;
 
   ${media.mobile`
-    font-size: 4.0em;
-    line-height: 1.2em;
+    font-size: 48px;
+    line-height: 50px;
   `};
 `;
 
@@ -122,8 +122,8 @@ export const Buttons = styled.div`
   margin-top: 40px;
 
   ${media.mobile`
-    flex-direction: row;
-    width: 100%;
+    flex-direction: column;
+    width: 80%;
   `};
 `;
 

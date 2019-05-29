@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../../constants/media.js";
 
 export const Container = styled.div`
   background: clear;
@@ -23,4 +24,8 @@ export const Container = styled.div`
     color: #7289da;
     font-weight: 500;
   }
+
+  ${media.mobile`
+    width: 100%;
+  `};
 `;

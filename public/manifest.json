@@ -1,14 +1,37 @@
 {
   "short_name": "Haven",
   "name": "Haven: Private, Stable, Money.",
+  "start_url": "index.html",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/pwa/windows10/Square71x71Logo.scale-400.png",
+      "sizes": "284x284"
+    },
+    {
+      "src": "/pwa/windows10/Square71x71Logo.scale-200.png",
+      "sizes": "142x142"
+    },
+    {
+      "src": "/pwa/windows10/Square71x71Logo.scale-100.png",
+      "sizes": "71x71"
+    },
+    {
+      "src": "/pwa/windows10/Square71x71Logo.scale-150.png",
+      "sizes": "107x107"
+    },
+    {
+      "src": "/pwa/windows10/Square71x71Logo.scale-125.png",
+      "sizes": "89x89"
+    },
+    {
+      "src": "/pwa/windows10/Square150x150Logo.scale-400.png",
+      "sizes": "600x600"
+    },
+    {
+      "src": "/pwa/windows10/Square150x150Logo.scale-200.png",
+      "sizes": "300x300"
     }
   ],
-  "start_url": ".",
   "display": "standalone",
   "theme_color": "#95237C",
   "background_color": "#95237C"
