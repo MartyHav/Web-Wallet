@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
     @font-face {
-     font-family: 'Inter-Bold';'../public/index.html'
+     font-family: 'Inter-Bold';
 
      src: url(${interBold});
   }
