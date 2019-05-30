@@ -14,15 +14,15 @@ import {
   Wrapper,
   Subtitle,
   Section,
-  Header
+  Header,
+  HeadingWrapper
 } from "./styles";
 
 import Footer from "../../../components/footer";
 import Content from "../../../components/_public/content";
-import Link from "../../../components/buttons/link";
+import Link from "../../../components/_buttons/link";
 import Button from "../../../components/_buttons/button";
 
-// import api from "../../../constants/data.js";
 import api from "../../../constants/priceData.js";
 
 class Welcome extends Component {
@@ -68,8 +68,9 @@ class Welcome extends Component {
       <Page>
         <Container>
           <Microcopy>
-            <Heading>Private, Stable,</Heading>
-            <Heading>Money</Heading>
+            <HeadingWrapper>
+              <Heading>Private, Stable, Money</Heading>
+            </HeadingWrapper>
             <Buttons>
               <Link to="/wallet/create" label="Get Haven Vault" />
               <Button onClick={this.handleClick} label="Learn More" />

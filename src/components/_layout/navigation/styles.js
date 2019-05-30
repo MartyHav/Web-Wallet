@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const Container = styled.div`
+export const Container = styled.header`
   height: 64px;
   z-index: 1000;
   position: fixed;

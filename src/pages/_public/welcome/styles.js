@@ -99,18 +99,23 @@ export const Microcopy = styled.div`
   height: auto;
 `;
 
-export const Heading = styled.div`
+export const HeadingWrapper = styled.div`
+  width: 80%;
+  height: auto;
+  text-align: center;
+  margin-top: -80px;
+`;
+
+export const Heading = styled.h1`
   font-weight: 900;
   font-family: "Playfair Display", serif;
   font-size: 80px;
   color: #ffffff;
   letter-spacing: 0;
-  line-height: 90px;
-  margin-left: 8px;
 
   ${media.mobile`
-    font-size: 48px;
-    line-height: 50px;
+    font-size: 60px;
+
   `};
 `;
 
@@ -119,7 +124,6 @@ export const Buttons = styled.div`
   width: auto;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
 
   ${media.mobile`
     flex-direction: column;
