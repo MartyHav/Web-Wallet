@@ -8,10 +8,10 @@ import Body from "../../../components/_layout/body";
 import Menu from "../../../components/_layout/menu";
 import Header from "../../../components/_layout/header";
 import Status from "../../../components/_layout/status/";
-import Input from "../../../components/inputs/input";
-import Form from "../../../components/inputs/form";
-import Dropdown from "../../../components/inputs/dropdown";
-import Footer from "../../../components/inputs/footer";
+import Input from "../../../components/_inputs/input";
+import Form from "../../../components/_inputs/form";
+import Dropdown from "../../../components/_inputs/dropdown";
+import Footer from "../../../components/_inputs/footer";
 
 import { Container } from "./styles";
 

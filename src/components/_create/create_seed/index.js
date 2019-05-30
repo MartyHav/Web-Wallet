@@ -3,7 +3,7 @@ import React from "react";
 
 // Relative Imports
 import { Information } from "../../../constants/type.js";
-import Description from "../../inputs/description/index.js";
+import Description from "../../_inputs/description";
 
 const CreateSeed = ({ value, name, readOnly, ...rest }) => {
   return (

@@ -7,7 +7,7 @@ import { currentUser } from "../../../actions";
 // Relative Imports
 import { Container } from "./styles";
 import Auth from "../../../components/_auth/login";
-import Description from "../../../components/inputs/description";
+import Description from "../../../components/_inputs/description";
 import { Information } from "../../../constants/type.js";
 
 const seed =

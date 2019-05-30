@@ -9,9 +9,9 @@ import Body from "../../../components/_layout/body";
 import Menu from "../../../components/_layout/menu";
 import Header from "../../../components/_layout/header";
 import Status from "../../../components/_layout/status/";
-import Toggle from "../../../components/inputs/toggle";
-import Form from "../../../components/inputs/form";
-import Theme from "../../../components/inputs/theme";
+import Toggle from "../../../components/_inputs/toggle";
+import Form from "../../../components/_inputs/form";
+import Theme from "../../../components/_inputs/theme";
 
 import { dark, light } from "../../../constants/themes.js";
 

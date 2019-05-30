@@ -8,10 +8,10 @@ import Body from "../../../components/_layout/body";
 import Menu from "../../../components/_layout/menu";
 import Header from "../../../components/_layout/header";
 import Status from "../../../components/_layout/status/";
-import Input from "../../../components/inputs/input";
-import Form from "../../../components/inputs/form";
-import Footer from "../../../components/inputs/footer";
-import Dropdown from "../../../components/inputs/dropdown";
+import Input from "../../../components/_inputs/input";
+import Form from "../../../components/_inputs/form";
+import Footer from "../../../components/_inputs/footer";
+import Dropdown from "../../../components/_inputs/dropdown";
 
 import { Container } from "./styles";
 
@@ -136,7 +136,7 @@ class Exchange extends Component {
               onClick={this.setReceiveAsset}
             />
             <Input
-              label="Receeve Amount"
+              label="Receive Amount"
               placeholder="Enter amount"
               name="receive_amount"
               type="number"
