@@ -20,7 +20,7 @@ import {
 import Footer from "../../../components/footer";
 import Content from "../../../components/_public/content";
 import Link from "../../../components/buttons/link";
-import Button from "../../../components/buttons/button";
+import Button from "../../../components/_buttons/button";
 
 // import api from "../../../constants/data.js";
 import api from "../../../constants/priceData.js";
