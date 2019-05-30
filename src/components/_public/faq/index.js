@@ -71,15 +71,15 @@ const Content = ({ ref }) => {
         <Cell>
           <Title>How does Haven stay stable?</Title>
           <Description>
-            The premise of a non-collateralized stable coin lies in game theory
-            and equlibria via zero sum games. In it's simplest form, users of
-            offshore/onshore will be right on market direction only 50% of the
-            time and as a result, gains and losses equal out. Over a longer
+            The premise of a non-collateralised stable coin lies in game theory
+            and equilibria via zero sum games. In it's simplest form, users of
+            offshore/onshore will be correct on market direction only 50% of the
+            time and as a result, gains and losses will equal out. Over a longer
             term, where markets are on a clear bull or bear run, it's possible
-            that enough users will recognize the opportunity and choose the
+            that enough users will recognise the opportunity and choose the
             right path, but only a few will be able to time the ultimate highs
-            and lows and over enough time, bull and bear traps will return
-            equilibrium.
+            and lows and over enough time, bull and bear traps will return the
+            balance.
           </Description>
         </Cell>
         <Cell>
@@ -88,23 +88,23 @@ const Content = ({ ref }) => {
             The pricing oracle is composed of OracleSrc which polls the
             exchanges to get pricing information, computes volume weighted
             average, signs the pricing record and broadcasts the pricing record.
-            OracleRouter, distributes those pricing records to OracleNodes which
-            miners use to add the pricing record to block headers.
+            OracleRouter then distributes those pricing records to OracleNodes
+            which miners use to add the pricing record to block headers.
           </Description>
         </Cell>
         <Cell>
           <Title>Who controls pricing oracle?</Title>
           <Description>
-            The haven blockchain is decentralized, OracleSrc was designed to
-            allow multiple OracleSrc nodes to provide pricing records using the
-            same private key. OracleRouter does not store the private keys so
-            OracleRouter nodes can be operated on hundreds of instances. Because
-            pricing information is so time sensitive, the design used a fan out
-            pattern to reduce propagation delays while achieving
-            decentralization. OracleSrc nodes because they locally store the
-            private keys will be operated by the core team. OracleRouters can be
-            operated by anyone who wants to run a node, and OracleNodes need to
-            be running wherever blocks are mined and created.
+            Yes, the Haven blockchain is decentralised. OracleSrc was designed
+            to allow multiple OracleSrc nodes to provide pricing records using
+            the same private key. OracleRouter does not store the private keys
+            so OracleRouter nodes can be operated in hundreds of instances.
+            Because pricing information is so time sensitive, the design used a
+            fan out pattern to reduce propagation delays while achieving
+            decentralisation. Because they store the private keys locally,
+            OracleSrc nodes will be operated by the core team. OracleRouters can
+            be operated by anyone who wants to run a node and OracleNodes need
+            to be running wherever blocks are mined and created.
           </Description>
         </Cell>
       </Container>
