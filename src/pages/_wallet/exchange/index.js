@@ -12,24 +12,26 @@ import Input from "../../../components/_inputs/input";
 import Form from "../../../components/_inputs/form";
 import Footer from "../../../components/_inputs/footer";
 import Dropdown from "../../../components/_inputs/dropdown";
+import Summary from "../../../components/summary";
 
 import { Container } from "./styles";
 
 const options = [
-  { asset: "Haven Token", ticker: "XHV" },
-  { asset: "United States Dollar", ticker: "xUSD" },
-  { asset: "Australian Dollar", ticker: "xAUD" }
+  { asset: "Haven Token", ticker: "XHV", price: 0.3293 },
+  { asset: "United States Dollar", ticker: "xUSD", price: 1.0012 }
 ];
 
 class Exchange extends Component {
   state = {
     status: false,
-    send_asset: "Select Asset",
-    send_amount: "",
-    send_ticker: "",
-    receive_asset: "Select Asset",
-    receive_amount: "",
-    receive_ticker: "",
+    from_asset: "Select Asset",
+    from_amount: "",
+    from_ticker: "",
+    from_price: "",
+    to_asset: "Select Asset",
+    to_amount: "",
+    to_ticker: "",
+    to_price: "",
     time: 7
   };
 
@@ -67,19 +69,23 @@ class Exchange extends Component {
   */
   };
 
-  setSendAsset = ({ asset, ticker }) => {
+  setFromAsset = option => {
+    const { asset, ticker, price } = option;
     // Call back function from Dropdown
     this.setState({
-      send_asset: asset,
-      send_ticker: ticker
+      from_asset: asset,
+      from_ticker: ticker,
+      from_price: price
     });
   };
 
-  setReceiveAsset = ({ asset, ticker }) => {
+  setToAsset = option => {
+    const { asset, ticker, price } = option;
     // Call back function from Dropdown
     this.setState({
-      receive_asset: asset,
-      receive_ticker: ticker
+      to_asset: asset,
+      to_ticker: ticker,
+      to_price: price
     });
   };
 
@@ -93,58 +99,60 @@ class Exchange extends Component {
   render() {
     const {
       status,
-      send_asset,
-      send_amount,
-      send_ticker,
-      receive_asset,
-      receive_ticker
+      from_asset,
+      from_amount,
+      from_ticker,
+      to_asset,
+      to_ticker,
+      to_amount
     } = this.state;
-
-    const xhv = 0.45;
-    const to = send_amount * xhv;
 
     return (
       <Page>
         <Menu />
         <Body>
-          <Header title="Exchange " description="Lorem impsum" />
+          <Header
+            title="Exchange "
+            description="Swap your Haven tokens for stable assets"
+          />
           <Form onSubmit={this.handleSubmit}>
             <Dropdown
               label="From Asset"
               placeholder="Select Asset"
-              name="send_asset"
-              ticker={send_ticker}
-              value={send_asset}
+              name="from_asset"
+              ticker={from_ticker}
+              value={from_asset}
               options={options}
-              onClick={this.setSendAsset}
+              onClick={this.setFromAsset}
             />
             <Input
-              label="Send Amount"
+              label="From Amount"
               placeholder="Enter amount"
               type="number"
-              name="send_amount"
-              value={send_amount}
+              name="from_amount"
+              value={from_amount}
               onChange={this.handleChange}
             />
             <Dropdown
-              label="Receive Asset"
+              label="To Asset"
               placeholder="Select Asset"
-              name="receive_asset"
-              value={receive_asset}
-              ticker={receive_ticker}
+              name="to_asset"
+              value={to_asset}
+              ticker={to_ticker}
               options={options}
-              onClick={this.setReceiveAsset}
+              onClick={this.setToAsset}
             />
             <Input
-              label="Receive Amount"
+              label="To Amount"
               placeholder="Enter amount"
-              name="receive_amount"
+              name="to_amount"
               type="number"
-              value={to.toFixed(4)}
+              value={to_amount}
               onChange={this.handleChange}
             />
           </Form>
           <Container>
+            <Summary state={this.state} />
             <Footer
               onClick={this.handleSubmit}
               label="Exchange"

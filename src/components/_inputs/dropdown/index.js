@@ -37,7 +37,7 @@ class Dropdown extends React.Component {
     return options.map(option => {
       const { asset, ticker } = option;
       return (
-        <Item key={asset} onClick={() => onClick({ asset, ticker })}>
+        <Item key={asset} onClick={() => onClick(option)}>
           <Row>
             <Name>{asset}</Name>
             {ticker ? <Ticker>{ticker}</Ticker> : null}
