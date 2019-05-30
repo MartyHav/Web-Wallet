@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import media from "../../constants/media.js";
-import { link, link_hover } from "../../constants/colors.js";
+import media from "../../../constants/media.js";
+import { link, link_hover } from "../../../constants/colors.js";
 
 export const Container = styled.div`
   display: grid;

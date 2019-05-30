@@ -18,7 +18,7 @@ import {
 } from "./styles";
 
 import Footer from "../../../components/footer";
-import Content from "../../../components/content";
+import Content from "../../../components/_public/content";
 import Link from "../../../components/buttons/link";
 import Button from "../../../components/buttons/button";
 

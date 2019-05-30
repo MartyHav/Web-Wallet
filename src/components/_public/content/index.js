@@ -10,10 +10,11 @@ import {
   LearnMore,
   Test
 } from "./styles";
-import { Header } from "../../constants/type.js";
-import how from "../../assets/how.svg";
-import what from "../../assets/what.svg";
-import why from "../../assets/why.svg";
+import { Header } from "../../../constants/type.js";
+import how from "../../../assets/how.svg";
+
+import what from "../../../assets/what.svg";
+import why from "../../../assets/why.svg";
 
 const Content = ({ ref }) => {
   return (
