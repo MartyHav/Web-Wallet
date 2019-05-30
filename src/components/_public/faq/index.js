@@ -21,8 +21,9 @@ const Content = ({ ref }) => {
         <Cell>
           <Title>Was there a pre-mine or ICO for Haven?</Title>
           <Description>
-            The original founders, who are no longer involved in the project
-            pre-mined 95,000 XHV coins but no ICO offered at launch.
+            There was no ICO, however the original founders ––{" "}
+            <strong>who were removed from the project</strong> –– pre-mined
+            95,000 XHV coins.
           </Description>
         </Cell>
         <Cell>
@@ -31,9 +32,9 @@ const Content = ({ ref }) => {
             Haven is funded by a 5% governance fee. The governance fee is taken
             from block rewards and stored in the team’s multi-signature wallet.
             The wallet is visible to the community and requires 2 or more team
-            members to transfer funds. (check my knowledge here) The new team is
-            committed to transparency and plans to use governance funds on
-            development, marketing, legal and exchange listing costs.
+            members to transfer funds. The new team is committed to transparency
+            and plans to use governance funds on development, marketing, legal
+            and exchange listing costs.
           </Description>
         </Cell>
         <Cell>
@@ -57,7 +58,8 @@ const Content = ({ ref }) => {
           <Description>
             Haven is available to buy from a number of exchanges. As a PoW coin
             on the Cryptonight-Haven algorithm, Haven can also be mined. The
-            current list of exchanges and mining pools are on our website.
+            current list of exchanges and mining pools are in the footer of the
+            website.
           </Description>
         </Cell>
         <Cell>
@@ -65,21 +67,21 @@ const Content = ({ ref }) => {
           <Description>
             Yes, as long as they have a Haven vault, you can send XHV to anyone
             in the world quickly, securely and privately. You will need to know
-            their Haven vault address to do this.
+            their Haven Vault address to do this.
           </Description>
         </Cell>
         <Cell>
           <Title>How does Haven stay stable?</Title>
           <Description>
-            The premise of a non-collateralised stable coin lies in game theory
-            and equilibria via zero sum games. In it's simplest form, users of
-            offshore/onshore will be correct on market direction only 50% of the
-            time and as a result, gains and losses will equal out. Over a longer
-            term, where markets are on a clear bull or bear run, it's possible
-            that enough users will recognise the opportunity and choose the
-            right path, but only a few will be able to time the ultimate highs
-            and lows and over enough time, bull and bear traps will return the
-            balance.
+            The premise of a non-collateralized stable coin lies in game theory
+            and equilibria via zero sum games. In it's simplest form, users that
+            mint and burn tokens will be correct on market direction only 50% of
+            the time and as a result, gains and losses will equal out. Over a
+            longer term, where markets are on a clear bull or bear run, it's
+            possible that enough users will recognize the opportunity and choose
+            the right path, but only a few will be able to time the ultimate
+            highs and lows and over enough time, bull and bear traps will return
+            the balance.
           </Description>
         </Cell>
         <Cell>
@@ -93,15 +95,15 @@ const Content = ({ ref }) => {
           </Description>
         </Cell>
         <Cell>
-          <Title>Who controls pricing oracle?</Title>
+          <Title>Is Haven decentralized? Who controls pricing oracle?</Title>
           <Description>
-            Yes, the Haven blockchain is decentralised. OracleSrc was designed
+            Yes, the Haven blockchain is decentralized. OracleSrc was designed
             to allow multiple OracleSrc nodes to provide pricing records using
             the same private key. OracleRouter does not store the private keys
             so OracleRouter nodes can be operated in hundreds of instances.
             Because pricing information is so time sensitive, the design used a
             fan out pattern to reduce propagation delays while achieving
-            decentralisation. Because they store the private keys locally,
+            decentralization. Because they store the private keys locally,
             OracleSrc nodes will be operated by the core team. OracleRouters can
             be operated by anyone who wants to run a node and OracleNodes need
             to be running wherever blocks are mined and created.
