@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import history from "./history.js";
 
 // Relative Imports
-import Navigation from "./components/navigation";
+import Navigation from "./components/_layout/navigation/index.js";
 import PrivateRoutes from "./routes/private/index.js";
 import PublicRoutes from "./routes/public/index.js";
 

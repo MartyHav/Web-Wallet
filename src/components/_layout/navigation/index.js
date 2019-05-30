@@ -1,12 +1,12 @@
 // Library Imports
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { authUser, currentUser } from "../../actions/index.js";
-import history from "../../history.js";
+import { authUser, currentUser } from "../../../actions/index.js";
+import history from "../../../history.js";
 
 // Relative Imports
 import { Container, Haven, Logo, Brand, Button, Logout } from "./styles.js";
-import Icon from "../../assets/haven.svg";
+import Icon from "../../../assets/haven.svg";
 
 class Navigation extends Component {
   handleLogout = () => {
