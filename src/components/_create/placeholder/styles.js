@@ -11,8 +11,8 @@ export const Container = styled.div`
   text-align: center;
 `;
 
-export const Image = styled.div`
-  height: 180px;
+export const Wrapper = styled.div`
+  height: 90%;
   width: 100%;
   border: 1px dashed ${background};
   display: flex;
@@ -21,4 +21,7 @@ export const Image = styled.div`
   text-align: center;
   color: grey;
   margin-bottom: 12px;
+`;
+export const Image = styled.img`
+  height: 90%;
 `;
