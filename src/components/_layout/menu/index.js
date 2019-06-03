@@ -2,13 +2,19 @@
 import React, { Component } from "react";
 
 // Relative Imports
-import { Container, Balance, Item } from "./styles";
+import { Container, Overview, Item, Value, Wrapper, Amount } from "./styles";
 
 class Menu extends Component {
   render() {
     return (
       <Container>
-        <Balance>$1,234.56</Balance>
+        <Overview>
+          <Wrapper>
+            <Amount>$1,234.56</Amount>
+            <Value>Total Balance (USD)</Value>
+          </Wrapper>
+        </Overview>
+
         <Item to="/wallet/assets">Assets</Item>
         <Item to="/wallet/exchange">Exchange</Item>
         <Item to="/wallet/transfer">Transfer</Item>

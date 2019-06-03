@@ -4,13 +4,13 @@ import React from "react";
 // Relative Imports
 import { Container, Image, Wrapper } from "./styles";
 import { Information } from "../../../constants/type.js";
-import lock from "../../../assets/create.svg";
+// import lock from "../../../assets/create.svg";
 
 const Placeholder = () => {
   return (
     <Container>
       <Wrapper>
-        <Image src={lock} />
+        <Image />
       </Wrapper>
       <Information>
         You're about to create a Vault for your assets. Before Generating a seed

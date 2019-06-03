@@ -2,12 +2,15 @@
 import React from "react";
 
 // Relative Imports
-import { Container, Amount } from "./styles";
+import { Container, Amount, Value, Wrapper } from "./styles";
 
 const Overview = ({ amount }) => {
   return (
     <Container>
-      <Amount>{amount}</Amount>
+      <Wrapper>
+        <Amount>{amount}</Amount>
+        <Value>Total Balance (USD)</Value>
+      </Wrapper>
     </Container>
   );
 };

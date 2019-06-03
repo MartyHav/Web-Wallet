@@ -26,18 +26,41 @@ export const Container = styled.div`
   `};
 `;
 
-export const Balance = styled.div`
+export const Wrapper = styled.div`
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Value = styled.div`
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: ${props => props.theme.type.secondary};
+  font-family: Inter-Regular;
+  margin-top: 12px;
+`;
+
+export const Amount = styled.div`
+  font-size: 32px;
+  font-family: Inter-Bold;
+  color: ${props => props.theme.type.primary};
+  letter-spacing: 0;
+  line-height: 30px;
+`;
+
+export const Overview = styled.div`
   height: 240px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid ${props => props.theme.body.border};
-  font-size: 32px;
-  font-family: Inter-Bold;
-  color: ${props => props.theme.type.primary};
-  letter-spacing: 0;
-  line-height: 30px;
+
   margin-top: 68px;
 
   ${media.laptop`

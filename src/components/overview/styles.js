@@ -14,7 +14,15 @@ export const Container = styled.div`
     display: inline;
     grid-column: 1 / 3;
     height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   `}
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Amount = styled.div`
@@ -26,4 +34,16 @@ export const Amount = styled.div`
   font-size: 36px;
   color: ${props => props.theme.type.primary};
   font-family: Inter-Bold;
+`;
+
+export const Value = styled.div`
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: ${props => props.theme.type.secondary};
+  font-family: Inter-Regular;
+  margin-top: 12px;
 `;
