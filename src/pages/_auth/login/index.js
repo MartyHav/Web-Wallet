@@ -21,14 +21,6 @@ class Login extends Component {
     error: ""
   };
 
-  // componentDidMount() {
-  //   // Comes form Redux
-  //   const { auth } = this.props;
-  //   this.setState({
-  //     auth: auth
-  //   });
-  // }
-
   handleChange = event => {
     const name = event.target.name;
     const value = event.target.value;
