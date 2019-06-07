@@ -1,3 +1,5 @@
+// These are colors for components that we don't want to be affected by themese
+
 module.exports = {
   background: "#2B2E34",
   background_hover: "#27292f",

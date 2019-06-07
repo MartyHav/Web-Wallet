@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { secondary } from "../../../constants/colors.js";
 import { Link } from "react-router-dom";
 
 export const Container = styled.div`
@@ -25,7 +24,7 @@ export const Row = styled.div`
 export const Back = styled(Link)`
   font-family: Inter-Regular;
   font-size: 20px;
-  color: ${secondary};
+  color: #8a8d90;
   letter-spacing: 0;
   line-height: 30px;
   margin-right: 12px;

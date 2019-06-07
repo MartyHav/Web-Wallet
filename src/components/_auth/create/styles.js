@@ -1,25 +1,18 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import {
-  border,
-  foreground,
-  background,
-  button,
-  foreground_hover
-} from "../../../constants/colors.js";
 
 export const Container = styled.div`
   height: auto;
   width: 624px;
   flex-direction: column;
   margin: 20px;
-  border: 1px solid ${border};
+  border: 1px solid #3a4048;
   border-radius: 4px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
 `;
 
 export const Main = styled.div`
-  background: ${foreground};
+  background: #36393f;
   border-radius: 2px 2px 0px 0px;
   height: auto;
   padding: 10px;
@@ -29,14 +22,14 @@ export const Header = styled.div`
   height: auto;
   width: auto;
   padding: 20px;
-  background: ${foreground};
-  border-bottom: 1px solid ${border};
+  background: #36393f;
+  border-bottom: 1px solid #3a4048;
 `;
 
 export const Title = styled.div`
   font-family: Inter-SemiBold;
   font-size: 20px;
-  color: #ffffff;
+  color: #fff;
   letter-spacing: 0;
   line-height: 30px;
 `;
@@ -50,7 +43,7 @@ export const Description = styled.div`
 
 export const Progress = styled.div`
   display: grid;
-  background: ${background};
+  background: #2b2e34;
   height: 4px;
   width: 100%;
   margin-bottom: 16px;
@@ -61,7 +54,7 @@ export const Step = styled.div`
     (props.width === 1 ? "10%" : null) ||
     (props.width === 2 ? "50%" : null) ||
     (props.width === 3 ? "100%" : null)}
-  background: ${button};
+  background: #7289DA;
   height: auto;
   border-radius: 4px;
 `;
@@ -110,7 +103,7 @@ export const Submit = styled.button`
 `;
 
 export const Back = styled.div`
-  background: ${foreground};
+  background: #36393f;
   border-radius: 4px;
   font-family: Inter-Regular;
   font-size: 14px;
@@ -128,13 +121,13 @@ export const Back = styled.div`
 
   &:hover {
     cursor: pointer;
-    background: ${foreground_hover};
+    background: #27292;
     transition: 500ms;
   }
 `;
 
 export const Cancel = styled(Link)`
-  background: ${foreground};
+  background: #36393f;
   border-radius: 4px;
   font-family: Inter-Regular;
   font-size: 14px;
@@ -152,20 +145,20 @@ export const Cancel = styled(Link)`
 
   &:hover {
     cursor: pointer;
-    background: ${foreground_hover};
+    background: #27292;
     transition: 500ms;
   }
 `;
 
 export const Footer = styled.div`
   height: 60px;
-  border-top: 1px solid ${border};
+  border-top: 1px solid #3a4048;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background: ${foreground};
+  background: #36393f;
   border-radius: 0px 0px 4px 4px;
 `;
 

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { background } from "../../../constants/colors.js";
 
 export const Container = styled.div`
   height: 220px;
@@ -14,7 +13,7 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   height: 90%;
   width: 100%;
-  border: 1px dashed ${background};
+  border: 1px dashed #2b2e34;
   display: flex;
   align-items: center;
   justify-content: center;

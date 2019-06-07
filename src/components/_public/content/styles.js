@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import media from "../../../constants/media.js";
-import { link, link_hover } from "../../../constants/colors.js";
 
 export const Container = styled.div`
   display: grid;
@@ -57,7 +56,7 @@ export const Words = styled.div`
 export const LearnMore = styled(Link)`
   font-family: Inter-Regular;
   font-size: 16px;
-  color: ${link};
+  color: #34d8ac;
   letter-spacing: 0;
   line-height: 26px;
   margin-top: 20px;
@@ -65,7 +64,7 @@ export const LearnMore = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    color: ${link_hover};
+    color: #2aad8a;
     cursor: pointer;
     transition: 500ms;
   }
