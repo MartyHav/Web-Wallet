@@ -11,8 +11,8 @@ import Description from "../../../components/_inputs/description";
 import { Information } from "../../../constants/type.js";
 import RPC from "../../../components/rpc";
 
-const seed =
-  "whip cactus theme clever relief category crucial decorate ghost veteran owner exile essay turkey spawn transfer potato island add forward script donor marriage choose";
+// const seed =
+//   "whip cactus theme clever relief category crucial decorate ghost veteran owner exile essay turkey spawn transfer potato island add forward script donor marriage choose";
 
 class Login extends Component {
   state = {
@@ -33,51 +33,56 @@ class Login extends Component {
 
   handleLogin = () => {
     // Deconstruct state
-    const { seed_phrase } = this.state;
+    // const { seed_phrase } = this.state;
 
-      // NEAC - parameters to configure for a call to the backend RPC code
-      var strMethod = "login";
-      var jsonParams = JSON.stringify({"mode":"seed","seed":this.state.seed_phrase});
-      
-      RPC.call_rpc("https://nelliekins.zapto.org", strMethod, jsonParams)
-          .then(function(objResponse) {
-              if (objResponse.hasOwnProperty("result")) {
+    // NEAC - parameters to configure for a call to the backend RPC code
+    var strMethod = "login";
+    var jsonParams = JSON.stringify({
+      mode: "seed",
+      seed: this.state.seed_phrase
+    });
 
-                  this.setState({
-                      loading: true
-                  });
+    RPC.call_rpc("https://nelliekins.zapto.org", strMethod, jsonParams)
+      .then(
+        function(objResponse) {
+          if (objResponse.hasOwnProperty("result")) {
+            this.setState({
+              loading: true
+            });
 
-                  const user = {
-                      auth: true,
-                      address: objResponse.address,
-                      seedPhrase: objResponse.seed,
-                      privateKey:
-                      "df008d3b68990dcf4b7c7ee2876b076e962780ed3d1d3cb01e57c5c9913222b1",
-                      spendKey:
-                      "8ac0f2094ed292a5ca0bd65055475b182e33e09b4017d67b2a817f88a831b52e",
-                      viewKey:
-                      "dcbce83bf1ac67579757b080a9bc096e487e2a039086b1e2caeffca9ae1a3862"
-                  };
+            const user = {
+              auth: true,
+              address: objResponse.address,
+              seedPhrase: objResponse.seed,
+              privateKey:
+                "df008d3b68990dcf4b7c7ee2876b076e962780ed3d1d3cb01e57c5c9913222b1",
+              spendKey:
+                "8ac0f2094ed292a5ca0bd65055475b182e33e09b4017d67b2a817f88a831b52e",
+              viewKey:
+                "dcbce83bf1ac67579757b080a9bc096e487e2a039086b1e2caeffca9ae1a3862"
+            };
 
-                  history.push("/wallet/assets");
-                  // Also push true into Redux for App.js to use
-                  this.props.currentUser(user);
-                  
-              } else if (objResponse.hasOwnProperty("error")) {
-                  throw new Error(objResponse.error);
-              } else {
-                  throw new Error("unknown error occurred");
-              }
-          }.bind(this))
-          .catch(function(myError) {
-              this.setState({ error: myError.message });
-              setTimeout(() => {
-                  this.setState({ error: "" });
-              }, 2000);
-          }.bind(this));
+            history.push("/wallet/assets");
+            // Also push true into Redux for App.js to use
+            this.props.currentUser(user);
+          } else if (objResponse.hasOwnProperty("error")) {
+            throw new Error(objResponse.error);
+          } else {
+            throw new Error("unknown error occurred");
+          }
+        }.bind(this)
+      )
+      .catch(
+        function(myError) {
+          this.setState({ error: myError.message });
+          setTimeout(() => {
+            this.setState({ error: "" });
+          }, 2000);
+        }.bind(this)
+      );
 
-      // NEAC - commented out the following code, because it needs to wait for the async response from the backend RPC code
-/*              
+    // NEAC - commented out the following code, because it needs to wait for the async response from the backend RPC code
+    /*
     // If invalid set an error state for 2 seconds
     if (valid === false) {
       this.setState({ error: "Sorry, that seed is incorrect" });
