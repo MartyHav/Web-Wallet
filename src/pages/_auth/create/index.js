@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import history from "../../../history.js";
 import { authUser, currentUser } from "../../../actions";
 import { connect } from "react-redux";
-import RPC from "../../../components/rpc/index.js";
 
 // Relative Imports
 import Auth from "../../../components/_auth/create/index.js";
