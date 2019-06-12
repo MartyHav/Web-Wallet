@@ -23,6 +23,7 @@ class Menu extends Component {
           debugger;
           if (objResponse.hasOwnProperty("result")) {
             // Got a balance - display it somehow
+
             debugger;
             this.setState({
               dCurrentBalance: new Number(
