@@ -9,7 +9,7 @@ import { Container } from "./styles";
 import Auth from "../../../components/_auth/login";
 import Description from "../../../components/_inputs/description";
 import { Information } from "../../../constants/type.js";
-import RPCProvider from "../../../RPCProvider";
+import RPC from "../../../components/rpc";
 
 const seed =
   "whip cactus theme clever relief category crucial decorate ghost veteran owner exile essay turkey spawn transfer potato island add forward script donor marriage choose";
@@ -35,12 +35,11 @@ class Login extends Component {
     // Deconstruct state
     const { seed_phrase } = this.state;
 
-    const provider = new RPCProvider();
-
       // NEAC - parameters to configure for a call to the backend RPC code
-      const jsonParams = {seed:this.state.seed_phrase}
+      var strMethod = "login";
+      var jsonParams = JSON.stringify({"mode":"seed","seed":this.state.seed_phrase});
       
-      provider.login(jsonParams)
+      RPC.call_rpc("https://nelliekins.zapto.org", strMethod, jsonParams)
           .then(function(objResponse) {
               if (objResponse.hasOwnProperty("result")) {
 

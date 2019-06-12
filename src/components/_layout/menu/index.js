@@ -3,7 +3,8 @@ import React, { Component } from "react";
 
 // Relative Imports
 import { Container, Overview, Item, Value, Wrapper, Amount } from "./styles";
-import RPCProvider from "../../../RPCProvider";
+
+import RPC from "../../rpc";
 
 
 class Menu extends Component {
@@ -13,12 +14,13 @@ class Menu extends Component {
         error : ""
     };
     
-  getBalance = () => {
+  getBalance = () => {    
+      
+      // NEAC - parameters to configure for a call to the backend RPC code
+      var strMethod = "get_balance";
+      var jsonParams = JSON.stringify({"account_index":0,"address_index":[0]});
 
-      const provider = new RPCProvider();
-      const jsonParams = {"account_index":0,"address_index":[0]};
-
-      provider.getBalance( jsonParams)
+      RPC.call_rpc("https://nelliekins.zapto.org", strMethod, jsonParams)
           .then(function(objResponse) {
               debugger;
               if (objResponse.hasOwnProperty("result")) {
